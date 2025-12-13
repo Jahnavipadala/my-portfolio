@@ -102,7 +102,7 @@ function App() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text animate-gradient">Hello!</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text animate-gradient">Hello! 👋 I’m Tagoor. Thanks for stopping by — explore my work below.</span>
             </div>
 
             <div className="flex items-center sm:hidden">
