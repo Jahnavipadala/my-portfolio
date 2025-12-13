@@ -104,7 +104,7 @@ function App() {
             <div className="flex items-center">
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text animate-gradient">Hello!👋    
                </span>
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text animate-gradient"> Welcome to my portfolio.</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text animate-gradient"> Welcome 🤝 </span>
             </div>
 
             <div className="flex items-center sm:hidden">
