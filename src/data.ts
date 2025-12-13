@@ -49,12 +49,7 @@ export const projects: Project[] = [
     'Handling varied query formats coming from employees.'
   ],
 
-  dataDetails: [
-    'Internal policy documents stored in vector DB (FAISS / Chroma)',
-    'Structured datasets accessed through APIs or SQL',
-    'User queries and interaction logs for improvement',
-    'Tool outputs from external services (search, email, workflow systems)'
-  ],
+  
 
   projectArchitecture: {
     description:
@@ -128,12 +123,7 @@ export const projects: Project[] = [
     constraints: [
       'Sudden shifts due to geopolitical events, wars, or trade restrictions can drastically affect coal prices.'
     ],
-    dataDetails: [
-      'Coal prices for different grades (4800-6000 kcal)',
-      'Oil prices (WTI, Brent, Dubai)',
-      'Stock prices of major energy companies',
-      'Weather data for Richards Bay'
-    ],
+    
     projectArchitecture: {
       description: 'The architecture follows a layered approach for data processing and analysis, integrating multiple tools',
       diagramUrl: 'https://i.postimg.cc/5NFrs0k1/Screenshot-2025-04-01-121642.png'
@@ -204,12 +194,7 @@ export const projects: Project[] = [
       'Data processing latency requirements',
       'Real-time analytics and decision-making.'
     ],
-    dataDetails: [
-      'Market clearing price data',
-      'Purchase and sell bid information',
-      'Trading session details',
-      'Volume data for different time periods'
-    ],
+    
     projectArchitecture: {
       description: '',
       diagramUrl: 'https://i.postimg.cc/nr8nP5Zh/Screenshot-2025-04-01-123535.png'
