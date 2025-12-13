@@ -47,20 +47,33 @@ export const projects: Project[] = [
     techStack: [
       {
         category: 'Programming',
-        items: ['Python'"FastAPI", "Streamlit"]
+        items: ['Python'"FastAPI", 'Streamlit']
       },
       {
         category: 'Data Engineering',
-        items: ['Pandas','pyspark',"SQL (PostgreSQL / MySQL)","prefect",
-      "Airflow",
-      "Vector DB","mongoDB"]
+        items: ['Pandas','pyspark','SQL','prefect',
+      'Airflow',
+      'Vector DB','mongoDB']
       },
+      {
+    category: 'AI & LLM Engineering',
+    icon: '🤖',
+    description:
+      'Creating production-ready LLM systems, RAG pipelines, embeddings, vector stores, and automation using modern AI frameworks',
+    items: [
+      'Agents creation',
+      'LangGraph',
+      'LangChain',
+      'OpenAI API',
+      'Llama Models',
+    ],
+  },
       {
         category: 'Database',
-        items: ['MySQL']
+        items: ['PostgreSQL','MySQL']
       },
       {
-        category: 'Visualization',
+        category: 'Data Analytics Tools',
         items: ['Power BI','Looker Studio']
       }
     ],
