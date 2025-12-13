@@ -272,7 +272,7 @@ function App() {
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text">About Me</h2>
             <div className="prose max-w-none">
               <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                I’m a Data Engineer who enjoys turning raw data into clean, scalable systems and building intelligent solutions that automate real-world workflows. I work across the data and AI pipeline—designing ETL processes, optimizing data structures, and creating LLM-powered agents that enhance productivity and decision-making.
+                I’m a Data Engineer who enjoys turning raw data into clean, scalable systems and building intelligent solutions that automate real-world workflows. I work across the data and AI pipeline designing ETL processes, optimizing data structures, and creating LLM-powered agents that enhance productivity and decision-making.
               </p>
               <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed mt-4`}>
                 I hold a B.Tech from Sagi Rama Krishnam Raju Engineering college, which laid the foundation for my problem-solving skills and logical thinking. My strengths include attention to detail, structured analysis, and the ability to translate technical findings into actionable business strategies.
