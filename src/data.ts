@@ -47,11 +47,13 @@ export const projects: Project[] = [
     techStack: [
       {
         category: 'Programming',
-        items: ['Python', 'SQL']
+        items: ['Python'"FastAPI", "Streamlit"]
       },
       {
-        category: 'Data Analysis',
-        items: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn']
+        category: 'Data Engineering',
+        items: ['Pandas','pyspark',"SQL (PostgreSQL / MySQL)","prefect",
+      "Airflow",
+      "Vector DB","mongoDB"]
       },
       {
         category: 'Database',
