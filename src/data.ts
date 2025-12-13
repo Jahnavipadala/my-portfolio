@@ -76,11 +76,10 @@ export const projects: Project[] = [
   ],
 
   keyLearnings: [
+    'Understood deep integration of FastAPI, vector databases, and custom tools to build production-ready AI workflows.',
     'Gained strong hands-on experience with LangGraph and multi-agent system design.',
     'Learned how to connect LLMs with real tools to perform actual business actions.',
-    'Improved architectural thinking for scalable AI systems supporting both deterministic and generative workflows.',
-    'Learned to optimize LLM latency using Groq/Llama, reduce hallucination, and improve tool correctness.',
-    'Understood deep integration of FastAPI, vector databases, and custom tools to build production-ready AI workflows.'
+    'Improved architectural thinking for scalable AI systems supporting both deterministic and generative workflows.'
   ],
 
   techStack: [
