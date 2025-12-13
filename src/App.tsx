@@ -255,13 +255,14 @@ function App() {
                 
                 </div>
 
-               <h1
-  className={`text-5xl font-extrabold tracking-wide mb-4 animate-fade-in 
-  ${isDarkMode ? 'text-white' : 'text-gray-900'} 
-  font-[Poppins]`}
+              <h1
+  className="text-5xl font-extrabold mb-4 animate-fade-in 
+  bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 
+  text-transparent bg-clip-text font-[Poppins] tracking-wide"
 >
   Tagoor Paramathma Jayamangala
 </h1>
+
 
 
                 <p className={`text-xl mb-8 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
