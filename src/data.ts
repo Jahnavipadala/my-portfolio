@@ -67,13 +67,10 @@ export const projects: Project[] = [
     'Containerized application using Docker and deployed on internal servers.',
     'Example flow:',
     'Ingestion: The user asks a question in natural language.',
-    ['Routing (The Graph): The core "Brain" analyzes the intent.',
-
-     'Intent: "What is the policy on maternity leave?" -> Routes to RAG Tool.',
-
-      'Intent: "Apply for sick leave for today." -> Routes to Apply Leave Tool.',
-
-      'Intent: "Why is my productivity low?" -> Routes to Prohance Data Tool.'],
+    'Routing: LangGraph identifies intent and selects the appropriate tool.',
+    'Example: "What is maternity leave policy?" → RAG tool.',
+    'Example: "Apply for sick leave today." → Leave application tool.',
+    'Example: "Why is my productivity low?" → Prohance analytics tool.',
     'Execution: The specific tool executes the task (querying a vector DB or hitting an API).',
   'Synthesis: The Agent receives the tools raw data and generates a polite,human-readable readable response confirming the action or providing the answer.'  
   ],
