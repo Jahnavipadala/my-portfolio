@@ -112,7 +112,7 @@ export function Modal({ project, onClose, isDarkMode }: ModalProps) {
           {project.methodology?.length > 0 && (
             <div className="animate-slide-in">
               <h3 className={`text-lg font-semibold mb-3 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`}>
-                Solution Approach
+                Solution Overview
               </h3>
               <ul className="list-disc list-inside space-y-2">
                 {project.methodology.map((step, index) => (
