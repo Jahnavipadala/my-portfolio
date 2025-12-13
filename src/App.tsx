@@ -110,7 +110,7 @@ function App() {
             <div className="flex items-center sm:hidden">
               <button
                 onClick={() => setIsDarkMode(!isDarkMode)}
-                className={`p-3 rounded-xl ${
+                className={`p-5 rounded-xl ${
                   isDarkMode ? 'text-gray-300 hover:bg-gray-800' : 'text-gray-600 hover:bg-gray-100'
                 } transition-all duration-300 transform hover:scale-110`}
               >
