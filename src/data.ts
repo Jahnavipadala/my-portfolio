@@ -1,81 +1,7 @@
 import { Project, Skill } from './types';
 
 export const projects: Project[] = [
-  {
-    id: 'sales-analysis',
-    title: 'Coal Price Analysis For steel manufacturer',
-    summary: 'Analyzed coal price trends using Python, performed data cleaning and EDA with Pandas and NumPy, visualized correlations with Matplotlib and Seaborn, and created interactive dashboards for insights using Power BI.',
-    tools: ['Python', 'Pandas', 'Matplotlib', 'Power BI', 'MySQL','Looker studio'],
-    coverImage: 'https://i.postimg.cc/mk3S20Ms/maxresdefault.jpg',
-    businessProblem: [
-      'Coal procurement is a critical cost center for steel manufacturing companies, but coal prices are highly volatile due to dynamic global factors such as crude oil price fluctuations, geopolitical events, and international trade disruptions. This volatility makes it difficult for the procurement team to forecast prices accurately, leading to unoptimized purchasing decisions, increased risk exposure, and reduced profit margins.','Despite having access to market, commodity, and weather data, the organization lacked a cohesive data-driven approach to monitor coal price trends.The absence of actionable insights resulted in missed opportunities to hedge or bulk purchase during favorable market conditions.'
-    ],
-    businessObjective: [
-      'To reduce coal procurement costs and improve profit margins by leveraging data-driven insights'
-    ],
-    constraints: [
-      'Sudden shifts due to geopolitical events, wars, or trade restrictions can drastically affect coal prices.'
-    ],
-    dataDetails: [
-      'Coal prices for different grades (4800-6000 kcal)',
-      'Oil prices (WTI, Brent, Dubai)',
-      'Stock prices of major energy companies',
-      'Weather data for Richards Bay'
-    ],
-    projectArchitecture: {
-      description: 'The architecture follows a layered approach for data processing and analysis, integrating multiple tools',
-      diagramUrl: 'https://i.postimg.cc/5NFrs0k1/Screenshot-2025-04-01-121642.png'
-    },
-    methodology: [
-      'Collected historical coal prices, crude oil prices, weather data, and stock prices from client sources.',
-      'Loaded raw data into a structured SQL database to enable efficient querying and transformation.',
-      'Cleaned the data by removing duplicates, handling missing values using forward fill, and performing type conversions for numerical and date fields.',
-      'Conducted exploratory data analysis in Python to identify trends, correlations, and volatility patterns in coal prices.',
-      'Found strong correlations between coal and crude oil prices, as well as synchronized movement among different coal grades.',
-      'Confirmed minimal influence of regional weather data on coal pricing trends.',
-      'Created dynamic dashboards using Power BI and Google Looker Studio to visualize price trends, correlations, and key performance indicators.',
-      'Enabled interactive filtering by coal grade, region, and date range to support procurement decisions.',
-      'Generated actionable insights such as using a unified buying strategy across grades, tracking oil as a leading indicator, and leveraging hedging strategies.',
-      'Presented findings to stakeholders through a structured slide deck with visuals, insights, and business recommendations.'
-    ],
-    keyLearnings: [
-      'Learned how to handle real-world, messy datasets with missing values, outliers, and inconsistent formats.',
-      'Improved storytelling skills by translating technical insights into clear, business-oriented recommendations.',
-      'Learned how to communicate insights effectively to non-technical stakeholders and support strategic procurement decisions.',
-      'Gained hands-on experience with end-to-end data workflows, from data collection and cleaning to analysis and visualization.'
-    ],
-    techStack: [
-      {
-        category: 'Programming',
-        items: ['Python','FastAPI', 'Streamlit']
-      },
-      {
-        category: 'Data Engineering',
-        items: ['Pandas','pyspark','SQL','prefect',
-      'Airflow',
-      'Vector DB','mongoDB']
-      },
-      {
-    category: 'AI & LLM Engineering',
-    items: [
-      'Agents creation',
-      'LangGraph',
-      'LangChain',
-      'OpenAI API',
-      'Llama Models',
-    ],
-  },
-      {
-        category: 'Database',
-        items: ['PostgreSQL','MySQL']
-      },
-      {
-        category: 'Data Analytics Tools',
-        items: ['Power BI','Looker Studio']
-      }
-    ],
-    dashboardUrl: 'https://www.canva.com/design/DAGm3Qw1_2U/TdX90sfqZEWFCOdQ9rKiyg/view?utm_content=DAGm3Qw1_2U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4b7377aae0'
-  },
+  
   {
   id: 'chittigpt',
   title: 'ChittiGPT – AI Agent Automation Platform',
@@ -179,6 +105,81 @@ export const projects: Project[] = [
     'https://www.canva.com/design/DAGxxxxxxx/your-chitti-gpt-demo-link'
 }
 ,
+  {
+    id: 'sales-analysis',
+    title: 'Coal Price Analysis For steel manufacturer',
+    summary: 'Analyzed coal price trends using Python, performed data cleaning and EDA with Pandas and NumPy, visualized correlations with Matplotlib and Seaborn, and created interactive dashboards for insights using Power BI.',
+    tools: ['Python', 'Pandas', 'Matplotlib', 'Power BI', 'MySQL','Looker studio'],
+    coverImage: 'https://i.postimg.cc/mk3S20Ms/maxresdefault.jpg',
+    businessProblem: [
+      'Coal procurement is a critical cost center for steel manufacturing companies, but coal prices are highly volatile due to dynamic global factors such as crude oil price fluctuations, geopolitical events, and international trade disruptions. This volatility makes it difficult for the procurement team to forecast prices accurately, leading to unoptimized purchasing decisions, increased risk exposure, and reduced profit margins.','Despite having access to market, commodity, and weather data, the organization lacked a cohesive data-driven approach to monitor coal price trends.The absence of actionable insights resulted in missed opportunities to hedge or bulk purchase during favorable market conditions.'
+    ],
+    businessObjective: [
+      'To reduce coal procurement costs and improve profit margins by leveraging data-driven insights'
+    ],
+    constraints: [
+      'Sudden shifts due to geopolitical events, wars, or trade restrictions can drastically affect coal prices.'
+    ],
+    dataDetails: [
+      'Coal prices for different grades (4800-6000 kcal)',
+      'Oil prices (WTI, Brent, Dubai)',
+      'Stock prices of major energy companies',
+      'Weather data for Richards Bay'
+    ],
+    projectArchitecture: {
+      description: 'The architecture follows a layered approach for data processing and analysis, integrating multiple tools',
+      diagramUrl: 'https://i.postimg.cc/5NFrs0k1/Screenshot-2025-04-01-121642.png'
+    },
+    methodology: [
+      'Collected historical coal prices, crude oil prices, weather data, and stock prices from client sources.',
+      'Loaded raw data into a structured SQL database to enable efficient querying and transformation.',
+      'Cleaned the data by removing duplicates, handling missing values using forward fill, and performing type conversions for numerical and date fields.',
+      'Conducted exploratory data analysis in Python to identify trends, correlations, and volatility patterns in coal prices.',
+      'Found strong correlations between coal and crude oil prices, as well as synchronized movement among different coal grades.',
+      'Confirmed minimal influence of regional weather data on coal pricing trends.',
+      'Created dynamic dashboards using Power BI and Google Looker Studio to visualize price trends, correlations, and key performance indicators.',
+      'Enabled interactive filtering by coal grade, region, and date range to support procurement decisions.',
+      'Generated actionable insights such as using a unified buying strategy across grades, tracking oil as a leading indicator, and leveraging hedging strategies.',
+      'Presented findings to stakeholders through a structured slide deck with visuals, insights, and business recommendations.'
+    ],
+    keyLearnings: [
+      'Learned how to handle real-world, messy datasets with missing values, outliers, and inconsistent formats.',
+      'Improved storytelling skills by translating technical insights into clear, business-oriented recommendations.',
+      'Learned how to communicate insights effectively to non-technical stakeholders and support strategic procurement decisions.',
+      'Gained hands-on experience with end-to-end data workflows, from data collection and cleaning to analysis and visualization.'
+    ],
+    techStack: [
+      {
+        category: 'Programming',
+        items: ['Python','FastAPI', 'Streamlit']
+      },
+      {
+        category: 'Data Engineering',
+        items: ['Pandas','pyspark','SQL','prefect',
+      'Airflow',
+      'Vector DB','mongoDB']
+      },
+      {
+    category: 'AI & LLM Engineering',
+    items: [
+      'Agents creation',
+      'LangGraph',
+      'LangChain',
+      'OpenAI API',
+      'Llama Models',
+    ],
+  },
+      {
+        category: 'Database',
+        items: ['PostgreSQL','MySQL']
+      },
+      {
+        category: 'Data Analytics Tools',
+        items: ['Power BI','Looker Studio']
+      }
+    ],
+    dashboardUrl: 'https://www.canva.com/design/DAGm3Qw1_2U/TdX90sfqZEWFCOdQ9rKiyg/view?utm_content=DAGm3Qw1_2U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4b7377aae0'
+  },
   {
     id: 'sales-forecasting',
     title: 'Power Trading Analysis',
