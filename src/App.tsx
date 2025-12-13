@@ -192,6 +192,7 @@ function App() {
                 </div>
                 
                 <div className="flex justify-center gap-4 mb-6">
+
                   <a
                     href="https://www.linkedin.com/in/tagoor-jayamangala-b19a30283/"
                     target="_blank"
@@ -204,7 +205,7 @@ function App() {
                   >
                     <Linkedin className="w-6 h-6" />
                   </a>
-                  
+                
                   <a
                     href="mailto:jayamangalatagoor@gmail.com"
                     className={`p-3 rounded-full ${
@@ -215,6 +216,22 @@ function App() {
                   >
                     <Mail className="w-6 h-6" />
                   </a>
+                
+                  <a
+                    href="https://github.com/YOUR_GITHUB_USERNAME"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-3 rounded-full ${
+                      isDarkMode 
+                        ? 'bg-gray-800 text-cyan-400 hover:bg-gray-700' 
+                        : 'bg-gray-100 text-blue-600 hover:bg-gray-200'
+                    } transition-all duration-300 transform hover:scale-110 hover:rotate-6`}
+                  >
+                    <Github className="w-6 h-6" />
+                  </a>
+                
+                </div>
+
                 </div>
 
                 <h1 className={`text-4xl font-bold mb-4 animate-fade-in ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
