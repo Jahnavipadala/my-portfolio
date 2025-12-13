@@ -272,13 +272,13 @@ function App() {
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text">About Me</h2>
             <div className="prose max-w-none">
               <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                Curious and detail-oriented, I thrive on uncovering patterns in data and transforming them into meaningful insights. With a strong analytical mindset, I enjoy solving complex problems and making data-driven decisions. My passion lies in storytelling through data—helping businesses understand trends and make informed choices. I believe that every dataset has a story to tell, and I'm always eager to explore, analyze, and present it in the most impactful way.
+                I’m a Data Engineer who enjoys turning raw data into clean, scalable systems and building intelligent solutions that automate real-world workflows. I work across the data and AI pipeline—designing ETL processes, optimizing data structures, and creating LLM-powered agents that enhance productivity and decision-making.
               </p>
               <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed mt-4`}>
-                I hold a B.Tech in Electrical and Electronics Engineering from Sagi Rama Krishnam Raju Engineering college, which laid the foundation for my problem-solving skills and logical thinking. My strengths include attention to detail, structured analysis, and the ability to translate technical findings into actionable business strategies.
+                I hold a B.Tech from Sagi Rama Krishnam Raju Engineering college, which laid the foundation for my problem-solving skills and logical thinking. My strengths include attention to detail, structured analysis, and the ability to translate technical findings into actionable business strategies.
               </p>
               <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed mt-4`}>
-                I am fluent in English, Telugu, and Hindi, enabling me to communicate effectively across teams and with stakeholders. I am open to relocating and flexible to work in cities like Hyderabad, Bangalore, Chennai, Mumbai or in a remote/hybrid setup.
+                I am fluent in English, Telugu, and Hindi, enabling me to communicate effectively across teams and with stakeholders. I am open to relocating and flexible to work.
                 I'm excited to grow in the world of data and continuously learn new ways to turn raw numbers into business value.
               </p>
             </div>
