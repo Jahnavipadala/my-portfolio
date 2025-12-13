@@ -51,7 +51,7 @@ export const projects: Project[] = [
   projectArchitecture: {
     description:
       'The architecture is built on modular agents using LangGraph, integrating LLM reasoning, vector search, custom tool execution, and FastAPI backend. The system supports parallel and dynamic decision paths, improving reliability and extensibility.',
-    diagramUrl: 'https://i.postimg.cc/5ycmYjFs/chitti-architecture.png'
+    diagramUrl: 'https://i.postimg.cc/YSVyXwxW/Gemini-Generated-Image-r5g3b1r5g3b1r5g3.png'
   },
 
   methodology: [
