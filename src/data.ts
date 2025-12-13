@@ -6,7 +6,7 @@ export const projects: Project[] = [
   id: 'chittigpt',
   title: 'ChittiGPT – AI Agent Automation Platform',
   summary:
-    'Developed an end-to-end intelligent agent system that automates employee workflows, integrates with custom tools, executes multi-step reasoning, and provides real-time responses using LLMs, vector databases, and modular toolchains.',
+    'This project implemented an Intelligent Employee Assistant Agent powered by a LangGraph ReAct workflow, serving as a unified conversational interface for all administrative needs. It dynamically routes user queries to a diverse toolkit (including a specialized RAG tool for policy and direct APIs for HRMS actions), significantly reducing support overhead and enhancing employee self-service efficiency. This achieved zero-click intelligence, allowing employees to execute complex tasks and retrieve critical data instantly through a single chat window.',
   tools: [
     'Python',
     'FastAPI',
@@ -15,25 +15,24 @@ export const projects: Project[] = [
     'OpenAI API',
     'Groq',
     'Llama Models',
-    'FAISS',
-    'ChromaDB',
+    'pgvector',
     'Docker',
     'GitHub'
   ],
   coverImage: 'https://i.postimg.cc/PrmdGSp5/what-is-GPT.png',
 
   businessProblem: [
-  'Enterprises face significant productivity loss and increased operational costs due to fragmented internal systems and manual administrative workflows.',
+  'Enterprises lose productivity and incur higher operational costs due to fragmented systems and manual workflows.',
   
-  'Employees spend excessive time navigating separate and complex enterprise applications (HRMS, Finance, Timesheets, Policy Portals) to perform simple tasks such as applying for leave, checking attendance, or retrieving policy information.',
+  'Employees waste time navigating multiple complex tools (HRMS, Finance, Timesheets) to complete simple tasks.',
   
-  'HR and IT support teams experience high workload due to repetitive Level-1 queries, reducing their ability to focus on strategic initiatives and process improvements.',
+  'HR and IT teams are overloaded with repetitive Level-1 queries, limiting their focus on strategic initiatives.',
   
-  'Policy documents and organizational guidelines are difficult to search, leading to inconsistent information retrieval, slower decision-making, and potential compliance risks.',
+  'Critical policies are hard to search, leading to inconsistent answers, slower decisions, and compliance risks.',
   
-  'Existing enterprise systems lack automation, require manual navigation, and do not provide a centralized intelligent interface—resulting in inefficiency and poor user experience.',
+  'Legacy systems lack automation and a unified interface, creating poor user experience and operational inefficiency.',
   
-  'The organization needed an AI-driven solution capable of understanding natural language, executing multi-step automated workflows, integrating with internal tools, and delivering accurate, actionable responses instantly.'
+  'A centralized AI system was needed to understand natural language, automate multi-step tasks, integrate with internal apps, and deliver instant, accurate responses.'
 ],
 
 
