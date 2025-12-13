@@ -213,42 +213,45 @@ function App() {
                 
                 <div className="flex justify-center gap-4 mb-6">
 
-                  <a
-                    href="https://www.linkedin.com/in/tagoor-jayamangala-b19a30283/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`p-3 rounded-full ${
-                      isDarkMode 
-                        ? 'bg-gray-800 text-cyan-400 hover:bg-gray-700' 
-                        : 'bg-gray-100 text-blue-600 hover:bg-gray-200'
-                    } transition-all duration-300 transform hover:scale-110 hover:rotate-6`}
-                  >
-                    <Linkedin className="w-6 h-6" />
-                  </a>
+                 <a
+                  href="https://www.linkedin.com/in/tagoor-jayamangala-b19a30283/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-3 rounded-full shadow-md border-2 ${
+                    isDarkMode
+                      ? 'bg-gray-900 border-cyan-400/40 text-cyan-300 hover:border-cyan-400 hover:shadow-cyan-500/40'
+                      : 'bg-white border-blue-400/40 text-blue-600 hover:border-blue-500 hover:shadow-blue-500/40'
+                  } transition-all duration-300 hover:scale-125 hover:rotate-3`}
+                >
+                  <Linkedin className="w-7 h-7" />
+                </a>
+
+                
+                 <a
+                  href="mailto:jayamangalatagoor@gmail.com"
+                  className={`p-3 rounded-full shadow-md border-2 ${
+                    isDarkMode
+                      ? 'bg-gray-900 border-cyan-400/40 text-cyan-300 hover:border-cyan-400 hover:shadow-cyan-500/40'
+                      : 'bg-white border-blue-400/40 text-blue-600 hover:border-blue-500 hover:shadow-blue-500/40'
+                  } transition-all duration-300 hover:scale-125 hover:rotate-3`}
+                >
+                  <Mail className="w-7 h-7" />
+                </a>
+
                 
                   <a
-                    href="mailto:jayamangalatagoor@gmail.com"
-                    className={`p-3 rounded-full ${
-                      isDarkMode 
-                        ? 'bg-gray-800 text-cyan-400 hover:bg-gray-700' 
-                        : 'bg-gray-100 text-blue-600 hover:bg-gray-200'
-                    } transition-all duration-300 transform hover:scale-110 hover:rotate-6`}
-                  >
-                    <Mail className="w-6 h-6" />
-                  </a>
-                
-                  <a
-                    href="https://github.com/dashboard"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`p-3 rounded-full ${
-                      isDarkMode 
-                        ? 'bg-gray-800 text-cyan-400 hover:bg-gray-700' 
-                        : 'bg-gray-100 text-blue-600 hover:bg-gray-200'
-                    } transition-all duration-300 transform hover:scale-110 hover:rotate-6`}
-                  >
-                    <Github className="w-6 h-6" />
-                  </a>
+                  href="https://github.com/TagoorJ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-3 rounded-full shadow-md border-2 ${
+                    isDarkMode
+                      ? 'bg-gray-900 border-cyan-400/40 text-cyan-300 hover:border-cyan-400 hover:shadow-cyan-500/40'
+                      : 'bg-white border-blue-400/40 text-blue-600 hover:border-blue-500 hover:shadow-blue-500/40'
+                  } transition-all duration-300 hover:scale-125 hover:rotate-3`}
+                >
+                  <Github className="w-7 h-7" />
+                </a>
+
                 
                 </div>
 
