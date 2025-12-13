@@ -23,10 +23,19 @@ export const projects: Project[] = [
   coverImage: 'https://i.postimg.cc/PrmdGSp5/what-is-GPT.png',
 
   businessProblem: [
-    'Employees often perform repetitive tasks such as policy lookup, document search, email drafting, data extraction, and workflow approvals. These tasks consume time and reduce productivity.',
-    'Existing systems lacked automation, required manual navigation, and did not centralize knowledge, leading to inefficiencies.',
-    'The organization needed an AI-driven system that could understand natural language, execute multi-step processes, connect with internal tools, and deliver actionable responses quickly.'
-  ],
+  'Enterprises face significant productivity loss and increased operational costs due to fragmented internal systems and manual administrative workflows.',
+  
+  'Employees spend excessive time navigating separate and complex enterprise applications (HRMS, Finance, Timesheets, Policy Portals) to perform simple tasks such as applying for leave, checking attendance, or retrieving policy information.',
+  
+  'HR and IT support teams experience high workload due to repetitive Level-1 queries, reducing their ability to focus on strategic initiatives and process improvements.',
+  
+  'Policy documents and organizational guidelines are difficult to search, leading to inconsistent information retrieval, slower decision-making, and potential compliance risks.',
+  
+  'Existing enterprise systems lack automation, require manual navigation, and do not provide a centralized intelligent interface—resulting in inefficiency and poor user experience.',
+  
+  'The organization needed an AI-driven solution capable of understanding natural language, executing multi-step automated workflows, integrating with internal tools, and delivering accurate, actionable responses instantly.'
+],
+
 
   businessObjective: [
     'Build an intelligent agent platform that automates employee workflows using LLMs, reduces manual effort, improves response accuracy, and accelerates decision-making.',
