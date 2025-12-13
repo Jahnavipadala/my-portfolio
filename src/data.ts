@@ -277,33 +277,48 @@ export const projects: Project[] = [
 
 export const skills: Skill[] = [
   {
-    category: 'Programming Languages',
-    items: ['Python', 'SQL'],
-    icon: '🖥️',
-    description: 'Proficient in writing efficient code and database queries'
+    category: 'Programming & Backend',
+    icon: '💻',
+    items: ['Python', 'FastAPI', 'Streamlit'],
+    description: 'Building scalable backend services, APIs, and automation workflows.'
   },
+
+  {
+    category: 'Data Engineering',
+    icon: '🛠️',
+    items: [
+      'SQL (PostgreSQL / MySQL)',
+      'Prefect',
+      'Airflow',
+      'Vector DB'
+    ],
+    description: 'Developing ETL pipelines, orchestration workflows, and optimized data systems.'
+  },
+
+  {
+    category: 'AI & LLM Engineering',
+    icon: '🤖',
+    items: [
+      'Agentic AI',
+      'LangGraph',
+      'LangChain',
+      'OpenAi'
+    ],
+    description:
+      'Creating LLM-powered automation, agents, and retrieval-based AI systems.'
+  },
+
   {
     category: 'Data Analysis Tools',
-    items: ['Advanced Excel', 'NumPy', 'Pandas', 'Matplotlib', 'Seaborn'],
     icon: '📊',
-    description: 'Expert in data manipulation, analysis, and visualization'
-  },
+    items: ['Advanced Excel', 'Power BI', 'Pandas'],
+    description: 'Performing EDA, statistical analysis, and generating meaningful insights from data.'
+  },,
+
   {
-    category: 'Visualization Tools',
-    items: ['Power BI', 'Tableau', 'Excel', 'Looker studio'],
-    icon: '📈',
-    description: 'Creating impactful dashboards and reports'
-  },
-  {
-    category: 'Databases',
-    items: ['MySQL'],
-    icon: '🗄️',
-    description: 'Database design and management'
-  },
-  {
-    category: 'Other Skills',
-    items: ['Data Cleaning', 'Data preprocessing', 'Exploratory Data Analysis'],
-    icon: '🔍',
-    description: 'End-to-end data pipeline management'
+    category: 'Other Tools & Platforms',
+    icon: '🧰',
+    items: ['Git', 'GitHub', 'Postman','Docker'],
+    description: 'Productive development workflows, version control, and API testing.'
   }
 ];
