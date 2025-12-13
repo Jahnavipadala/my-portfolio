@@ -114,7 +114,7 @@ function App() {
                   isDarkMode ? 'text-gray-300 hover:bg-gray-800' : 'text-gray-600 hover:bg-gray-100'
                 } transition-all duration-300 transform hover:scale-110`}
               >
-                {isDarkMode ? <Sun className="w-7 h-7" /> : <Moon className="w-7 h-7" />}
+                {isDarkMode ? <Sun className="w-9 h-9" /> : <Moon className="w-8 h-8" />}
               </button>
 
               <button
