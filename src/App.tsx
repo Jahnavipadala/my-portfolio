@@ -255,13 +255,14 @@ function App() {
                 
                 </div>
 
-              <h1
-  className="text-5xl font-extrabold mb-4 animate-fade-in 
-  bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 
-  text-transparent bg-clip-text font-[Poppins] tracking-wide"
+             <h1
+  className={`text-5xl font-semibold mb-4 animate-fade-in 
+  ${isDarkMode ? 'text-gray-100' : 'text-gray-900'} 
+  font-[Merriweather]`}
 >
   Tagoor Paramathma Jayamangala
 </h1>
+
 
 
 
