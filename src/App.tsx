@@ -43,10 +43,15 @@ function App() {
     }, 300);
   };
 
-  const handleContactClick = () => {
-    setShowContactInfo(true);
-    toast.success('Contact information displayed!');
-  };
+ const handleContactClick = () => {
+  setShowContactInfo(true);
+  toast.success('Contact information displayed!');
+
+  // Auto-close after 5 seconds
+  setTimeout(() => {
+    setShowContactInfo(false);
+  }, 5000);
+};
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', isDarkMode);
@@ -569,41 +574,47 @@ function App() {
             </button>
 
             {showContactInfo && (
-              <div className={`${
-                isDarkMode ? 'bg-gray-800' : 'bg-gray-50'
-              } p-8 rounded-xl shadow-lg animate-scale-in border ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
-                <div className="space-y-6">
-                  <div className="flex items-center justify-center gap-4">
-                    <Phone className={`w-6 h-6 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`} />
-                    <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                      +91 9182619119
-                    </p>
-                  </div>
-                  
-                  <div className="flex items-center justify-center gap-4">
-                    <Mail className={`w-6 h-6 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`} />
-                    <a 
-                      href="mailto:jayamangalatagore@gmail.com"
-                      className={`text-lg ${isDarkMode ? 'text-gray-300 hover:text-cyan-400' : 'text-gray-600 hover:text-blue-600'} transition-colors`}
-                    >
-                      jayamangalatagore@gmail.com
-                    </a>
-                  </div>
-                  
-                  <div className="flex items-center justify-center gap-4">
-                    <Linkedin className={`w-6 h-6 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`} />
-                    <a 
-                      href="https://www.linkedin.com/in/tagoor-jayamangala-b19a30283/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`text-lg ${isDarkMode ? 'text-gray-300 hover:text-cyan-400' : 'text-gray-600 hover:text-blue-600'} transition-colors`}
-                    >
-                      LinkedIn Profile
-                    </a>
-                  </div>
-                </div>
-              </div>
-            )}
+  <div
+    onDoubleClick={() => setShowContactInfo(false)}
+    className={`${
+      isDarkMode ? 'bg-gray-800' : 'bg-gray-50'
+    } p-8 rounded-xl shadow-lg animate-scale-in border ${
+      isDarkMode ? 'border-gray-700' : 'border-gray-200'
+    }`}
+  >
+    <div className="space-y-6">
+      <div className="flex items-center justify-center gap-4">
+        <Phone className={`w-6 h-6 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`} />
+        <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+          +91 9182619119
+        </p>
+      </div>
+
+      <div className="flex items-center justify-center gap-4">
+        <Mail className={`w-6 h-6 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`} />
+        <a
+          href="mailto:jayamangalatagore@gmail.com"
+          className={`text-lg ${isDarkMode ? 'text-gray-300 hover:text-cyan-400' : 'text-gray-600 hover:text-blue-600'} transition-colors`}
+        >
+          jayamangalatagore@gmail.com
+        </a>
+      </div>
+
+      <div className="flex items-center justify-center gap-4">
+        <Linkedin className={`w-6 h-6 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`} />
+        <a
+          href="https://www.linkedin.com/in/tagoor-jayamangala-b19a30283/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`text-lg ${isDarkMode ? 'text-gray-300 hover:text-cyan-400' : 'text-gray-600 hover:text-blue-600'} transition-colors`}
+        >
+          LinkedIn Profile
+        </a>
+      </div>
+    </div>
+  </div>
+)}
+
           </div>
         </section>
       </main>
