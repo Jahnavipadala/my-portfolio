@@ -103,7 +103,8 @@ function App() {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text animate-gradient">Hello! 👋 
-                I’m Tagoor.\n Explore my work below.</span>
+               </span>
+              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text animate-gradient"> I’m Tagoor. Welcome to my portfolio.</span>
             </div>
 
             <div className="flex items-center sm:hidden">
