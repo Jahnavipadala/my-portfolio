@@ -289,7 +289,7 @@ function App() {
 
         <section id="education" className={`py-16 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'} ${visibleSections.has('education') ? 'animate-fade-in' : ''}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text">Education <span className="text-xl font-bold ml-1">🎓</span></h2>
+            <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text">Education </h2>
             
             
             <div className="space-y-8">
