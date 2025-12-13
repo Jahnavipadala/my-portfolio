@@ -255,9 +255,13 @@ function App() {
                 
                 </div>
 
-                <h1 className={`text-4xl font-bold mb-4 animate-fade-in ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
-                  Tagoor Paramathma Jayamangala
-                </h1>
+                <h1
+                className={`text-5xl font-bold mb-4 animate-fade-in tracking-[0.15em] uppercase 
+                ${isDarkMode ? 'text-cyan-300' : 'text-blue-700'} font-[Orbitron]`}
+              >
+                Tagoor Paramathma Jayamangala
+              </h1>
+
                 <p className={`text-xl mb-8 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                   Data Engineer | Data-Driven Problem Solver 
                 </p>
