@@ -87,20 +87,7 @@ export function Modal({ project, onClose, isDarkMode }: ModalProps) {
             </div>
           )}
 
-          {project.dataDetails?.length > 0 && (
-            <div className="animate-slide-in">
-              <h3 className={`text-lg font-semibold mb-3 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`}>
-                Data Details
-              </h3>
-              <ul className="list-disc list-inside space-y-2">
-                {project.dataDetails.map((point, index) => (
-                  <li key={index} className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          
 
           {project.projectArchitecture && (
             <div className="animate-slide-in">
