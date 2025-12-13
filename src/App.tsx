@@ -256,12 +256,13 @@ function App() {
                 </div>
 
             <h1
-  className="text-5xl font-semibold mb-4 animate-fade-in 
-  font-[GeneralSans] tracking-wide 
-  text-gray-100 dark:text-white"
+  className="text-5xl font-extrabold mb-4 animate-fade-in 
+  font-[Satoshi] tracking-tight 
+  text-white drop-shadow-[0_2px_8px_rgba(0,200,255,0.4)]"
 >
   Tagoor Paramathma Jayamangala
 </h1>
+
 
 
 
