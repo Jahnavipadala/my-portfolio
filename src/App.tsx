@@ -349,119 +349,142 @@ function App() {
           </div>
         </section>
 
-        <section id="skills" className={`py-16 ${isDarkMode ? 'bg-gray-900' : 'bg-white'} ${visibleSections.has('skills') ? 'animate-fade-in' : ''}`}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text">Skills</h2>
-            
-            <div className="relative">
-              <div className="flex justify-between items-center mb-6">
-                <button
-                  onClick={() => handleSkillChange('prev')}
-                  className={`p-2 sm:p-4 rounded-full ${
-                    isDarkMode 
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600' 
-                      : 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600'
-                  } transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl`}
-                >
-                  <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
-                </button>
-                
-                <div className="flex gap-2 sm:gap-4 overflow-x-auto py-2 px-1 no-scrollbar">
-                  {skills.map((skill, index) => (
-                    <div key={index} className="relative group flex-shrink-0">
-                      <button
-                        onClick={() => setActiveSkillIndex(index)}
-                        onMouseEnter={() => setHoveredSkillIndex(index)}
-                        onMouseLeave={() => setHoveredSkillIndex(null)}
-                        className={`p-2 sm:p-4 rounded-xl transition-all duration-300 transform ${
-                          index === activeSkillIndex
-                            ? isDarkMode 
-                              ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white scale-110' 
-                              : 'bg-gradient-to-r from-blue-500 to-purple-500 text-white scale-110'
-                            : isDarkMode
-                              ? 'bg-gray-700 text-gray-300 hover:bg-gray-600 hover:scale-105'
-                              : 'bg-white text-gray-600 hover:bg-gray-50 hover:scale-105'
-                        } shadow-lg hover:shadow-xl`}
-                      >
-                        <span className="text-xl sm:text-2xl">{skill.icon}</span>
-                      </button>
-                      {hoveredSkillIndex === index && (
-                        <div className={`absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 rounded-lg text-xs sm:text-sm font-medium ${
-                          isDarkMode 
-                            ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white' 
-                            : 'bg-gradient-to-r from-blue-500 to-purple-500 text-white'
-                        } shadow-lg whitespace-nowrap animate-fade-in z-10`}>
-                          {skill.category}
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-                
-                <button
-                  onClick={() => handleSkillChange('next')}
-                  className={`p-2 sm:p-4 rounded-full ${
-                    isDarkMode 
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600' 
-                      : 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600'
-                  } transition-all duration-300 transform hover:scale-110 shadow-lg hover:shadow-xl`}
-                >
-                  <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
-                </button>
-              </div>
+        <section
+  id="skills"
+  className={`py-16 ${
+    isDarkMode ? "bg-gray-900" : "bg-white"
+  } ${visibleSections.has("skills") ? "animate-fade-in" : ""}`}
+>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text">
+      Skills
+    </h2>
 
-              <div className="relative overflow-hidden rounded-xl">
-                <div
-                  className={`transform transition-all duration-300 ${
-                    isSkillTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
-                  }`}
-                >
-                  <div
-                    key={skills[activeSkillIndex].category}
-                    className={`${
-                      isDarkMode ? 'bg-gray-900' : 'bg-white'
-                    } p-4 sm:p-8 rounded-xl shadow-lg border ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}
-                  >
-                    <div className="flex items-center mb-6">
-                      <span className="text-4xl sm:text-5xl mr-4 animate-bounce">
-                        {skills[activeSkillIndex].icon}
-                      </span>
-                      <h3 className={`text-xl sm:text-2xl font-bold ${
-                        isDarkMode ? 'bg-gradient-to-r from-cyan-400 to-blue-400' : 'bg-gradient-to-r from-blue-400 to-purple-400'
-                      } text-transparent bg-clip-text`}>
-                        {skills[activeSkillIndex].category}
-                      </h3>
-                    </div>
-                    
-                    <p className={`text-base sm:text-lg mb-6 ${
-                      isDarkMode ? 'text-gray-300' : 'text-gray-600'
-                    }`}>
-                      {skills[activeSkillIndex].description}
-                    </p>
-                    
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4">
-                      {skills[activeSkillIndex].items.map((skill, index) => (
-                        <div
-                          key={skill}
-                          className={`px-3 py-2 sm:px-4 sm:py-3 rounded-lg text-center ${
-                            isDarkMode 
-                              ? 'bg-gradient-to-r from-gray-800 to-gray-700 text-cyan-300 hover:from-gray-700 hover:to-gray-600' 
-                              : 'bg-gradient-to-r from-gray-50 to-white text-blue-600 hover:from-blue-50 hover:to-gray-50'
-                          } transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer border ${
-                            isDarkMode ? 'border-gray-600' : 'border-gray-200'
-                          } text-sm sm:text-base`}
-                          style={{ animationDelay: `${index * 10}ms` }}
-                        >
-                          {skill}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+    <div className="relative">
+      {/* Navigation Buttons */}
+      <div className="flex justify-between items-center mb-6">
+        <button
+          onClick={() => handleSkillChange("prev")}
+          className={`p-3 rounded-full ${
+            isDarkMode
+              ? "bg-gray-800 text-cyan-400 hover:bg-gray-700"
+              : "bg-gray-100 text-blue-600 hover:bg-gray-200"
+          } transition-all duration-300 hover:scale-110 shadow-md`}
+        >
+          <ChevronLeft className="w-7 h-7" />
+        </button>
+
+        {/* Icons Scroll */}
+        <div className="flex gap-4 overflow-x-auto py-3 px-2 no-scrollbar">
+          {skills.map((skill, index) => (
+            <div key={index} className="relative group flex-shrink-0">
+              <button
+                onClick={() => setActiveSkillIndex(index)}
+                className={`p-4 rounded-xl transition-all duration-300 ${
+                  index === activeSkillIndex
+                    ? isDarkMode
+                      ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white scale-110 shadow-xl"
+                      : "bg-gradient-to-r from-blue-500 to-purple-500 text-white scale-110 shadow-xl"
+                    : isDarkMode
+                      ? "bg-gray-700 text-gray-300 hover:bg-gray-600 hover:scale-105"
+                      : "bg-white text-gray-600 hover:bg-gray-50 hover:scale-105 shadow"
+                }`}
+              >
+                <span className="text-2xl">{skill.icon}</span>
+              </button>
+
+              {/* Tooltip */}
+              <div
+                className={`${
+                  hoveredSkillIndex === index ? "block" : "hidden"
+                } absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 px-3 py-1 rounded-md text-sm font-medium shadow-lg ${
+                  isDarkMode
+                    ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white"
+                    : "bg-gradient-to-r from-blue-500 to-purple-500 text-white"
+                }`}
+              >
+                {skill.category}
               </div>
             </div>
+          ))}
+        </div>
+
+        <button
+          onClick={() => handleSkillChange("next")}
+          className={`p-3 rounded-full ${
+            isDarkMode
+              ? "bg-gray-800 text-cyan-400 hover:bg-gray-700"
+              : "bg-gray-100 text-blue-600 hover:bg-gray-200"
+          } transition-all duration-300 hover:scale-110 shadow-md`}
+        >
+          <ChevronRight className="w-7 h-7" />
+        </button>
+      </div>
+
+      {/* Active Skill Panel */}
+      <div className="relative overflow-hidden rounded-xl shadow-lg">
+        <div
+          className={`transition-all duration-300 ${
+            isSkillTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"
+          }`}
+        >
+          <div
+            key={skills[activeSkillIndex].category}
+            className={`${
+              isDarkMode ? "bg-gray-900" : "bg-white"
+            } p-8 rounded-xl border ${
+              isDarkMode ? "border-gray-700" : "border-gray-200"
+            }`}
+          >
+            {/* Header */}
+            <div className="flex items-center mb-6">
+              <span className="text-5xl mr-4 animate-bounce">
+                {skills[activeSkillIndex].icon}
+              </span>
+              <h3
+                className={`text-2xl font-bold ${
+                  isDarkMode
+                    ? "bg-gradient-to-r from-cyan-400 to-blue-400"
+                    : "bg-gradient-to-r from-blue-400 to-purple-400"
+                } text-transparent bg-clip-text`}
+              >
+                {skills[activeSkillIndex].category}
+              </h3>
+            </div>
+
+            {/* Description */}
+            <p
+              className={`text-lg mb-6 ${
+                isDarkMode ? "text-gray-300" : "text-gray-600"
+              } leading-relaxed`}
+            >
+              {skills[activeSkillIndex].description}
+            </p>
+
+            {/* Skill Items */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              {skills[activeSkillIndex].items.map((item, index) => (
+                <div
+                  key={item}
+                  className={`px-4 py-3 rounded-lg text-center font-medium transition-all duration-300 ${
+                    isDarkMode
+                      ? "bg-gray-800 text-cyan-300 hover:bg-gray-700 hover:scale-105"
+                      : "bg-gray-50 text-blue-600 hover:bg-gray-100 hover:scale-105"
+                  } shadow-sm border ${
+                    isDarkMode ? "border-gray-700" : "border-gray-200"
+                  }`}
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         <section id="projects" className={`py-16 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'} ${visibleSections.has('projects') ? 'animate-fade-in' : ''}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
