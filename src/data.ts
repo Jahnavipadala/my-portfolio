@@ -313,7 +313,7 @@ export const skills: Skill[] = [
     icon: '📊',
     items: ['Advanced Excel', 'Power BI', 'Pandas'],
     description: 'Performing EDA, statistical analysis, and generating meaningful insights from data.'
-  },,
+  },
 
   {
     category: 'Other Tools & Platforms',
