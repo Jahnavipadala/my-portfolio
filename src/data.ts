@@ -57,9 +57,6 @@ export const projects: Project[] = [
       },
       {
     category: 'AI & LLM Engineering',
-    icon: '🤖',
-    description:
-      'Creating production-ready LLM systems, RAG pipelines, embeddings, vector stores, and automation using modern AI frameworks',
     items: [
       'Agents creation',
       'LangGraph',
