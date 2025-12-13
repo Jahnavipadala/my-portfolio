@@ -111,7 +111,7 @@ function App() {
                </span>
               <span className="text-xl font-bold ml-1">👋</span>
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text animate-gradient"> Welcome  </span>
-              <span className="text-xl font-bold ml-1">🤝</span>
+              
             </div>
 
             <div className="flex items-center sm:hidden">
