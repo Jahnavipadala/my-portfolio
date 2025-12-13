@@ -206,7 +206,7 @@ function App() {
                   </a>
                   
                   <a
-                    href="mailto:jayamangalatagore@gmail.com"
+                    href="mailto:jayamangalatagoor@gmail.com"
                     className={`p-3 rounded-full ${
                       isDarkMode 
                         ? 'bg-gray-800 text-cyan-400 hover:bg-gray-700' 
@@ -221,7 +221,7 @@ function App() {
                   Tagoor Paramathma Jayamangala
                 </h1>
                 <p className={`text-xl mb-8 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  Analytical Thinker | Data-Driven Problem Solver | Eager to Grow in Data Analytics
+                  Data Engineer | Data-Driven Problem Solver 
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
