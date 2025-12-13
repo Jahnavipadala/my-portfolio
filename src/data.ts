@@ -70,7 +70,7 @@ export const projects: Project[] = [
     'Routing: LangGraph identifies intent and selects the appropriate tool.',
     'Example: "What is maternity leave policy?" → RAG tool.',
     'Example: "Apply for sick leave today." → Leave application tool.',
-    'Example: "Why is my productivity low?" → Prohance analytics tool.',
+    'Example: "what is the productivity of my employees?" → Prohance analytics tool.',
     'Execution: The specific tool executes the task (querying a vector DB or hitting an API).',
   'Synthesis: The Agent receives the tools raw data and generates a polite,human-readable readable response confirming the action or providing the answer.'  
   ],
