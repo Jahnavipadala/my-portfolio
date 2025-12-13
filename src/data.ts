@@ -47,7 +47,7 @@ export const projects: Project[] = [
     techStack: [
       {
         category: 'Programming',
-        items: ['Python'"FastAPI", 'Streamlit']
+        items: ['Python','FastAPI', 'Streamlit']
       },
       {
         category: 'Data Engineering',
