@@ -65,8 +65,17 @@ export const projects: Project[] = [
     'Implemented a memory layer for conversational context and short-term state management.',
     'Added error-handling, timeouts, retry strategies, and logging for reliability.',
     'Containerized application using Docker and deployed on internal servers.',
-    'Tested agent performance across different employee workflows and tuned prompts for accuracy.',
-    'Developed a modular structure so new tools and agents can be added easily.'
+    'Example flow:',
+    'Ingestion: The user asks a question in natural language.',
+    ['Routing (The Graph): The core "Brain" analyzes the intent.',
+
+     'Intent: "What is the policy on maternity leave?" -> Routes to RAG Tool.',
+
+      'Intent: "Apply for sick leave for today." -> Routes to Apply Leave Tool.',
+
+      'Intent: "Why is my productivity low?" -> Routes to Prohance Data Tool.'],
+    'Execution: The specific tool executes the task (querying a vector DB or hitting an API).',
+  'Synthesis: The Agent receives the tools raw data and generates a polite,human-readable readable response confirming the action or providing the answer.'  
   ],
 
   keyLearnings: [
