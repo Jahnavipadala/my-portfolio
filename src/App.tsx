@@ -218,7 +218,7 @@ function App() {
                   </a>
                 
                   <a
-                    href="https://github.com/YOUR_GITHUB_USERNAME"
+                    href="https://github.com/dashboard"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`p-3 rounded-full ${
