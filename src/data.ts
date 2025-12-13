@@ -94,7 +94,7 @@ export const projects: Project[] = [
     'Docker',
     'GitHub'
   ],
-  coverImage: 'https://i.postimg.cc/855j9mNV/chitti-gpt-banner.png',
+  coverImage: 'https://i.postimg.cc/PrmdGSp5/what-is-GPT.png',
 
   businessProblem: [
     'Employees often perform repetitive tasks such as policy lookup, document search, email drafting, data extraction, and workflow approvals. These tasks consume time and reduce productivity.',
