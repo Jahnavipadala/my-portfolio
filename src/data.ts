@@ -38,9 +38,8 @@ export const projects: Project[] = [
 
 
   businessObjective: [
-    'Build an intelligent agent platform that automates employee workflows using LLMs, reduces manual effort, improves response accuracy, and accelerates decision-making.',
-    'Enable a scalable agent architecture where new tools and skills can be added without redesigning the system.',
-    'Provide reliable reasoning with structured tool usage and ensure domain-specific accuracy.'
+    'To deploy a cutting-edge, conversational AI assistant that unifies access to all employee administrative and informational tools through a single, natural language interface.',
+    'Enable a scalable agent architecture where new tools and skills can be added without redesigning the system.'
   ],
 
   constraints: [
