@@ -140,7 +140,7 @@ export const projects: Project[] = [
   ],
 
   projectArchitecture: {
-    description: 'A Streamlit frontend takes the Excel file upload, processes the three sheets using Pandas, performs data validation and deduplication, and stores the cleaned data in MySQL using SQLAlchemy ORM. Logging and exception handling ensure reliability.'
+    description: ['A Streamlit frontend takes the Excel file upload, processes the three sheets using Pandas, performs data validation and deduplication, and stores the cleaned data in MySQL using SQLAlchemy ORM. Logging and exception handling ensure reliability.']
   },
 
   methodology: [
