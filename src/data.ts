@@ -183,69 +183,78 @@ export const projects: Project[] = [
     dashboardUrl: 'https://www.canva.com/design/DAGm3Qw1_2U/TdX90sfqZEWFCOdQ9rKiyg/view?utm_content=DAGm3Qw1_2U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4b7377aae0'
   },
   {
-    id: 'sales-forecasting',
-    title: 'Power Trading Analysis',
-    summary: 'Analyzed electricity market data to understand price volatility, demand-supply patterns, and seasonal trends.',
-    tools: ['Python', 'numpy', 'Pandas', 'mysql', 'Power BI', 'Microsoft Excel', 'Tableau', 'Looker Studio'],
-    coverImage: 'https://i.postimg.cc/Gp9zJg0F/energy-power.jpg',
-    businessProblem: [
-      'In power trading, understanding electricity price fluctuations, demand-supply patterns, and market anomalies is critical for making informed trading decisions.'
-    ],
-    businessObjective: [
-      'Minimize uncertainty in demand-supply fluctuations.'
-    ],
-    constraints: [
-      'Data processing latency requirements',
-      'Real-time analytics and decision-making.'
-    ],
-    
-    projectArchitecture: {
-      description: '',
-      diagramUrl: 'https://i.postimg.cc/nr8nP5Zh/Screenshot-2025-04-01-123535.png'
+  id: 'welpun-rejection-reporting',
+  title: 'Industrial Rejection Reports Automation System',
+  summary: 'Developed a Streamlit-based application that allows users to upload rejection pipe data, automatically extract structured information from Excel sheets, and store it in MySQL without duplication.',
+  tools: ['Python', 'Streamlit', 'Pandas', 'MySQL', 'SQLAlchemy', 'Microsoft Excel'],
+  coverImage: 'https://i.postimg.cc/W1vD2bhQ/industrial-quality-control.jpg',
+
+  businessProblem: [
+    'The quality team needed a frictionless way to record daily pipe rejection reports. Existing manual entry processes were slow, prone to duplication, and caused frequent data inconsistencies.',
+    'Tracking and validating rejection reasons across multiple production stages (ProdRej, DIP1, DIP2) required an automated, reliable system.'
+  ],
+
+  businessObjective: [
+    'Automate the ingestion of rejection-related production data from Excel sheets.',
+    'Eliminate duplicate entries and ensure accurate storage in the MySQL database.',
+    'Provide a simple interface for non-technical users to upload and validate rejection data.'
+  ],
+
+  constraints: [
+    'Excel files contained multiple sheets with varying formats, requiring robust parsing logic.',
+    'Duplicate detection needed to be precise to avoid overwriting or missing important records.',
+    'Users needed instant feedback on upload results and data validity.'
+  ],
+
+  projectArchitecture: {
+    description: 'A Streamlit frontend takes the Excel file upload, processes the three sheets using Pandas, performs data validation and deduplication, and stores the cleaned data in MySQL using SQLAlchemy ORM. Logging and exception handling ensure reliability.',
+    diagramUrl: 'https://i.postimg.cc/yN2Xd4YG/data-flow-diagram-industrial.png'
+  },
+
+  methodology: [
+    'Designed a user-friendly Streamlit interface allowing operators to upload Excel files containing ProdRej, DIP1, and DIP2 sheet data.',
+    'Used Pandas to read and validate multiple sheets while ensuring consistent column structure.',
+    'Implemented record-level deduplication by checking existing database entries before insertion.',
+    'Configured MySQL tables (prodrej, dip1, dip2) specifically mapped to each sheet structure.',
+    'Used SQLAlchemy ORM for safe, structured database transactions.',
+    'Added validation to ensure only clean, complete rows are inserted.',
+    'Provided success/error messages in real time so users could confirm upload accuracy.',
+    'Created a logging mechanism to trace uploads, rejected rows, duplicates, and system issues.'
+  ],
+
+  keyLearnings: [
+    'Gained expertise in building data ingestion pipelines with automated validation.',
+    'Learned effective strategies for detecting and preventing duplicate database entries.',
+    'Enhanced experience with Streamlit UI/UX improvements for industrial use cases.',
+    'Understood real-world production data challenges such as inconsistent formatting.'
+  ],
+
+  techStack: [
+    {
+      category: 'Programming',
+      items: ['Python']
     },
-    methodology: [
-      'Imported necessary Python libraries like pandas, numpy, seaborn, matplotlib, and plotly for data analysis and visualization.','Loaded the electricity price dataset into a Pandas DataFrame for processing.',
-'Performed initial data exploration using .head(), .info(), and .describe() to understand the structure and summary statistics.',
+    {
+      category: 'Framework',
+      items: ['Streamlit']
+    },
+    {
+      category: 'Data Processing',
+      items: ['Pandas', 'OpenPyXL']
+    },
+    {
+      category: 'Database',
+      items: ['MySQL', 'SQLAlchemy']
+    },
+    {
+      category: 'Tools',
+      items: ['Excel']
+    }
+  ],
 
-'Checked for missing values and handled them appropriately to maintain data quality.',
+  dashboardUrl: 'https://www.canva.com/design/DAGh_kGrQhw/2zD0jgNS6BhUOeh8IUERbQ/view?utm_content=DAGh_kGrQhw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hbff4127822'
+}
 
-'Analyzed the distribution of electricity prices and demand-supply values using histograms and KDE plots.',
-
-'Created time series plots to identify trends and fluctuations in electricity prices over time.',
-
-'Generated correlation heatmaps to find relationships between features affecting price volatility.',
-
-'Used boxplots and line charts to visualize seasonal price patterns and detect outliers.',
-
-'Conducted group-based analysis by time intervals (e.g., hourly, monthly) to uncover peak demand and high volatility periods.',
-
-'Created interactive visualizations using plotly for better user understanding.',
-
-'Derived insights such as price behavior during high-demand hours and the impact of seasonality on trading decisions.'
-    ],
-    keyLearnings: [
-      'Learned how critical it is to preprocess and synchronize time-series data'
-    ],
-    techStack: [
-      {
-        category: 'Programming',
-        items: ['Python', 'SQL']
-      },
-      {
-        category: 'Data Analysis',
-        items: ['NumPy', 'Pandas']
-      },
-      {
-        category: 'Database',
-        items: ['MySQL']
-      },
-      {
-        category: 'Visualization',
-        items: ['Power BI', 'Tableau', 'Excel', 'Looker studio']
-      }
-    ],
-    dashboardUrl: 'https://www.canva.com/design/DAGh_kGrQhw/2zD0jgNS6BhUOeh8IUERbQ/view?utm_content=DAGh_kGrQhw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hbff4127822'
-  }
 ];
 
 export const skills: Skill[] = [
