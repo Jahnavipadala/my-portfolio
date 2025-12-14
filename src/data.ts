@@ -108,6 +108,8 @@ export const projects: Project[] = [
     }
   ],
 
+  visualizations: [],
+
   dashboardUrl:
     'https://www.canva.com/design/DAGxxxxxxx/your-chitti-gpt-demo-link'
 }
@@ -138,8 +140,9 @@ export const projects: Project[] = [
   ],
 
   projectArchitecture: {
-    description: 'A Streamlit frontend takes the Excel file upload, processes the three sheets using Pandas, performs data validation and deduplication, and stores the cleaned data in MySQL using SQLAlchemy ORM. Logging and exception handling ensure reliability.',
-   
+    description: 'A Streamlit frontend takes the Excel file upload, processes the three sheets using Pandas, performs data validation and deduplication, and stores the cleaned data in MySQL using SQLAlchemy ORM. Logging and exception handling ensure reliability.'
+  },
+
   methodology: [
     'Designed a user-friendly Streamlit interface allowing operators to upload Excel files containing ProdRej, DIP1, and DIP2 sheet data.',
     'Used Pandas to read and validate multiple sheets while ensuring consistent column structure.',
@@ -180,6 +183,8 @@ export const projects: Project[] = [
       items: ['Excel']
     }
   ],
+
+  visualizations: [],
 
   dashboardUrl: 'https://www.canva.com/design/DAGh_kGrQhw/2zD0jgNS6BhUOeh8IUERbQ/view?utm_content=DAGh_kGrQhw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hbff4127822'
 },
@@ -252,6 +257,7 @@ export const projects: Project[] = [
         items: ['Power BI','Looker Studio']
       }
     ],
+    visualizations: [],
     dashboardUrl: 'https://www.canva.com/design/DAGm3Qw1_2U/TdX90sfqZEWFCOdQ9rKiyg/view?utm_content=DAGm3Qw1_2U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4b7377aae0'
   },
 
