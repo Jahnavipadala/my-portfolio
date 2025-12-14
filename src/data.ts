@@ -141,7 +141,7 @@ export const projects: Project[] = [
 
   projectArchitecture: {
     description: [
-      '**Streamlit User Interface (Frontend):** Serves as the simple, single-point interface for the quality team to upload the raw Excel report file and receive instant feedback.',
+      'Streamlit User Interface (Frontend): Serves as the simple, single-point interface for the quality team to upload the raw Excel report file and receive instant feedback.',
       '**Pandas Multi-Sheet Processing:** Utilizes Pandas to reliably read a single Excel file but process data from three distinct sheets (`ProdRej`, `DIP1`, `DIP2`).',
       '**Record-Level Deduplication Logic:** Performs a crucial validation and deduplication step by checking existing MySQL entries before insertion, ensuring data integrity.',
       '**SQLAlchemy ORM (Backend-to-Database Bridge):** Used to manage structured and safe transactions, acting as an ORM to map processed data into the target database tables.',
