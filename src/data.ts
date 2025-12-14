@@ -52,7 +52,7 @@ export const projects: Project[] = [
 
   projectArchitecture: {
     description:
-      'The architecture is built on modular agents using LangGraph, integrating LLM reasoning, vector search, custom tool execution, and FastAPI backend. The system supports parallel and dynamic decision paths, improving reliability and extensibility.',
+      ['The architecture is built on modular agents using LangGraph, integrating LLM reasoning, vector search, custom tool execution, and FastAPI backend. The system supports parallel and dynamic decision paths, improving reliability and extensibility.'],
     diagramUrl: 'https://i.postimg.cc/YSVyXwxW/Gemini-Generated-Image-r5g3b1r5g3b1r5g3.png'
   },
 
@@ -110,8 +110,7 @@ export const projects: Project[] = [
 
   visualizations: [],
 
-  dashboardUrl:
-    'https://www.canva.com/design/DAGxxxxxxx/your-chitti-gpt-demo-link'
+ 
 }
 ,
  
@@ -140,7 +139,14 @@ export const projects: Project[] = [
   ],
 
   projectArchitecture: {
-    description: 'A Streamlit frontend takes the Excel file upload, processes the three sheets using Pandas, performs data validation and deduplication, and stores the cleaned data in MySQL using SQLAlchemy ORM. Logging and exception handling ensure reliability.'
+    description: [
+  "**Streamlit User Interface (Frontend):** Serves as the simple, single-point interface for the quality team to upload Excel files.",
+  "**Pandas Multi-Sheet Processing:** Reads and processes 3 sheets (`ProdRej`, `DIP1`, `DIP2`).",
+  "**Record-Level Deduplication Logic:** Prevents duplicate entries before writing to MySQL.",
+  "**SQLAlchemy ORM (Backend-to-Database Bridge):** Ensures safe and structured DB transactions.",
+  "**Three-Table MySQL Structure (Database Layer):** Stores data across ProdRej, DIP1, DIP2 tables."
+]
+
   },
 
   methodology: [
@@ -186,7 +192,7 @@ export const projects: Project[] = [
 
   visualizations: [],
 
-  dashboardUrl: 'https://www.canva.com/design/DAGh_kGrQhw/2zD0jgNS6BhUOeh8IUERbQ/view?utm_content=DAGh_kGrQhw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hbff4127822'
+  
 },
 
  {
@@ -206,7 +212,7 @@ export const projects: Project[] = [
     ],
     
     projectArchitecture: {
-      description: 'The architecture follows a layered approach for data processing and analysis, integrating multiple tools',
+      description: ['The architecture follows a layered approach for data processing and analysis, integrating multiple tools'],
       diagramUrl: 'https://i.postimg.cc/5NFrs0k1/Screenshot-2025-04-01-121642.png'
     },
     methodology: [
@@ -258,7 +264,7 @@ export const projects: Project[] = [
       }
     ],
     visualizations: [],
-    dashboardUrl: 'https://www.canva.com/design/DAGm3Qw1_2U/TdX90sfqZEWFCOdQ9rKiyg/view?utm_content=DAGm3Qw1_2U&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4b7377aae0'
+    
   },
 
 ];
