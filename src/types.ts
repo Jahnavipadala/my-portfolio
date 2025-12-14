@@ -6,7 +6,7 @@ export interface Project {
   businessProblem: string[];
   businessObjective: string[];
   constraints: string[];
-  projectArchitecture: {
+  projectArchitecture?: {
     description: string;
     diagramUrl?: string;
   };
