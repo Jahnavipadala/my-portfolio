@@ -113,7 +113,7 @@ export const projects: Project[] = [
 }
 ,
   {
-    id: 'sales-analysis',
+    id: 'Coal Price Analysis',
     title: 'Coal Price Analysis For steel manufacturer',
     summary: 'Analyzed coal price trends using Python, performed data cleaning and EDA with Pandas and NumPy, visualized correlations with Matplotlib and Seaborn, and created interactive dashboards for insights using Power BI.',
     tools: ['Python', 'Pandas', 'Matplotlib', 'Power BI', 'MySQL','Looker studio'],
