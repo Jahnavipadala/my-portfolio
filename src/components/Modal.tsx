@@ -96,7 +96,16 @@ export function Modal({ project, onClose, isDarkMode }: ModalProps) {
               </h3>
               <div className="space-y-4">
                 <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                  {project.projectArchitecture.description}
+                  {project.projectArchitecture?.description && (
+  <ul className="list-disc pl-6 space-y-2">
+    {project.projectArchitecture.description.map((point, index) => (
+      <li key={index} className="text-gray-300">
+        {point}
+      </li>
+    ))}
+  </ul>
+)}
+
                 </p>
                 {project.projectArchitecture.diagramUrl && (
                   <img
