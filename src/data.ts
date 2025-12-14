@@ -118,7 +118,7 @@ export const projects: Project[] = [
   title: 'Industrial Rejection Reports Automation System',
   summary: 'Developed a Streamlit-based application that allows users to upload rejection pipe data, automatically extract structured information from Excel sheets, and store it in MySQL without duplication.',
   tools: ['Python', 'Streamlit', 'Pandas', 'MySQL', 'SQLAlchemy', 'Microsoft Excel'],
-  coverImage: 'https://i.postimg.cc/W1vD2bhQ/industrial-quality-control.jpg',
+  coverImage: 'https://i.postimg.cc/HLSWQZG8/9dcf9e0f-16ed-4495-a8f4-98f4c9cba131.jpg',
 
   businessProblem: [
     'The quality team needed a frictionless way to record daily pipe rejection reports. Existing manual entry processes were slow, prone to duplication, and caused frequent data inconsistencies.',
