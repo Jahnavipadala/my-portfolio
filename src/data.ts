@@ -122,7 +122,7 @@ export const projects: Project[] = [
 
   businessProblem: [
     'The quality team needed a frictionless way to record daily pipe rejection reports. Existing manual entry processes were slow, prone to duplication, and caused frequent data inconsistencies.',
-    'Tracking and validating rejection reasons across multiple production stages (ProdRej, DIP1, DIP2) required an automated, reliable system.'
+    'Tracking and validating rejection reasons across multiple production stages required an automated, reliable system.'
   ],
 
   businessObjective: [
