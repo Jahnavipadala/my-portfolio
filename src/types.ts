@@ -7,7 +7,7 @@ export interface Project {
   businessObjective: string[];
   constraints: string[];
   projectArchitecture?: {
-    description: string[];
+    description: string;
     diagramUrl?: string;
   };
   methodology: string[];
