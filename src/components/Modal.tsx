@@ -89,7 +89,7 @@ export function Modal({ project, onClose, isDarkMode }: ModalProps) {
 
           
 
-          {project.projectArchitecture && (
+          {project.projectArchitecture? && (
             <div className="animate-slide-in">
               <h3 className={`text-lg font-semibold mb-3 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`}>
                 Project Architecture
@@ -99,7 +99,7 @@ export function Modal({ project, onClose, isDarkMode }: ModalProps) {
                   {project.projectArchitecture.description}
                 </p>
                 <img 
-                  src={project.projectArchitecture.diagramUrl} 
+                  src={project.projectArchitecture?.diagramUrl} 
                   alt="Project Architecture Diagram"
                   className={`rounded-lg shadow-md w-full hover:shadow-lg transition-shadow border ${
                     isDarkMode ? 'border-gray-700' : 'border-gray-200'
