@@ -139,9 +139,7 @@ export const projects: Project[] = [
 
   projectArchitecture: {
     description: 'A Streamlit frontend takes the Excel file upload, processes the three sheets using Pandas, performs data validation and deduplication, and stores the cleaned data in MySQL using SQLAlchemy ORM. Logging and exception handling ensure reliability.',
-    diagramUrl: 'https://i.postimg.cc/yN2Xd4YG/data-flow-diagram-industrial.png'
-  },
-
+   
   methodology: [
     'Designed a user-friendly Streamlit interface allowing operators to upload Excel files containing ProdRej, DIP1, and DIP2 sheet data.',
     'Used Pandas to read and validate multiple sheets while ensuring consistent column structure.',
