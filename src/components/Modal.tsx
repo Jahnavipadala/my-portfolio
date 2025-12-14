@@ -8,6 +8,11 @@ interface ModalProps {
   isDarkMode: boolean;
 }
 
+const formatBullet = (text: string) => {
+  return text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+};
+
+
 export function Modal({ project, onClose, isDarkMode }: ModalProps) {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -90,35 +95,42 @@ export function Modal({ project, onClose, isDarkMode }: ModalProps) {
 
 
           {project.projectArchitecture && (
-            <div className="animate-slide-in">
-              <h3 className={`text-lg font-semibold mb-3 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`}>
-                Project Architecture
-              </h3>
-              <div className="space-y-4">
-                <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                  {project.projectArchitecture?.description && (
-  <ul className="list-disc pl-6 space-y-2">
-    {project.projectArchitecture.description.map((point, index) => (
-      <li key={index} className="text-gray-300">
-        {point}
-      </li>
-    ))}
-  </ul>
-)}
+  <div className="animate-slide-in">
+    <h3
+      className={`text-lg font-semibold mb-3 ${
+        isDarkMode ? "text-cyan-400" : "text-blue-600"
+      }`}
+    >
+      Project Architecture
+    </h3>
 
-                </p>
-                {project.projectArchitecture.diagramUrl && (
-                  <img
-                    src={project.projectArchitecture.diagramUrl}
-                    alt="Project Architecture Diagram"
-                    className={`rounded-lg shadow-md w-full hover:shadow-lg transition-shadow border ${
-                      isDarkMode ? 'border-gray-700' : 'border-gray-200'
-                    }`}
-                  />
-                )}
-              </div>
-            </div>
-          )}
+    <div className="space-y-4">
+      {/* Description List */}
+      {project.projectArchitecture?.description && (
+        <ul className="list-disc pl-6 space-y-2">
+          {project.projectArchitecture.description.map((point, index) => (
+            <li
+              key={index}
+              className={`${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
+              dangerouslySetInnerHTML={{ __html: formatBullet(point) }}
+            ></li>
+          ))}
+        </ul>
+      )}
+
+      {/* Diagram */}
+      {project.projectArchitecture.diagramUrl && (
+        <img
+          src={project.projectArchitecture.diagramUrl}
+          alt="Project Architecture Diagram"
+          className={`rounded-lg shadow-md w-full hover:shadow-lg transition-shadow border ${
+            isDarkMode ? "border-gray-700" : "border-gray-200"
+          }`}
+        />
+      )}
+    </div>
+  </div>
+)}
 
           {project.methodology?.length > 0 && (
             <div className="animate-slide-in">
