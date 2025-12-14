@@ -8,7 +8,7 @@ export interface Project {
   constraints: string[];
   projectArchitecture: {
     description: string;
-    diagramUrl: string;
+    diagramUrl?: string;
   };
   methodology: string[];
   keyLearnings: string[];
