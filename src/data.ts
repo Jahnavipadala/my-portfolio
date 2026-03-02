@@ -1,110 +1,96 @@
-import { Project, Skill } from './types';
+import { Project, Skill, Internship } from './types';
 
 export const projects: Project[] = [
   
   {
-  id: 'chittigpt',
-  title: 'ChittiGPT – AI Agent Automation Platform',
+  id: 'ASL',
+  title: 'American Sign Language (ASL) Recognition System',
   summary:
-    'This project implemented an Intelligent Employee Assistant Agent powered by a LangGraph ReAct workflow, serving as a unified conversational interface for all administrative needs. It dynamically routes user queries to a diverse toolkit (including a specialized RAG tool for policy and direct APIs for HRMS actions), significantly reducing support overhead and enhancing employee self-service efficiency. This achieved zero-click intelligence, allowing employees to execute complex tasks and retrieve critical data instantly through a single chat window.',
+    'Developed a real-time American Sign Language (ASL) Recognition System using deep learning and computer vision techniques to detect hand gestures and convert them into text. The system processes live video input, identifies individual alphabet signs, and displays the corresponding output, improving communication accessibility for hearing-impaired users.',
   tools: [
     'Python',
-    'FastAPI',
-    'LangChain',
-    'LangGraph',
-    'OpenAI API',
-    'Groq',
-    'Llama Models',
-    'pgvector',
-    'Docker',
-    'GitHub'
+    'OpenCV',
+    'Deep Learning',
+    'CNN',
+    'RNN',
+    'Numpy',
+    'Matplotlib',
+    'TensorFlow'
   ],
-  coverImage: 'https://i.postimg.cc/PrmdGSp5/what-is-GPT.png',
+  coverImage: 'https://i.postimg.cc/vHXpfggR/asl1.jpg',
 
   businessProblem: [
-  'Enterprises lose productivity and incur higher operational costs due to fragmented systems and manual workflows.',
+  'Communication gap between hearing-impaired individuals and non-sign language users leads to dependency and reduced accessibility.',
   
-  'Employees waste time navigating multiple complex tools (HRMS, Finance, Timesheets) to complete simple tasks.',
+  'Most existing ASL tools are static (image-based) and do not support real-time gesture recognition.',
   
-  'HR and IT teams are overloaded with repetitive Level-1 queries, limiting their focus on strategic initiatives.',
+  'Many systems recognize only isolated letters and fail to construct complete words or sentences.',
   
-  'Critical policies are hard to search, leading to inconsistent answers, slower decisions, and compliance risks.',
-  
-  'Legacy systems lack automation and a unified interface, creating poor user experience and operational inefficiency.',
-  
-  'A centralized AI system was needed to understand natural language, automate multi-step tasks, integrate with internal apps, and deliver instant, accurate responses.'
+  'Traditional systems struggle to accurately recognize gestures under variations such as rotated or flipped hand signs, different lighting conditions, background noise, and varying hand orientations.'
+
 ],
 
 
   businessObjective: [
-    'To deploy a cutting-edge, conversational AI assistant that unifies access to all employee administrative and informational tools through a single, natural language interface.',
-    'Enable a scalable agent architecture where new tools and skills can be added without redesigning the system.'
+    'Develop a real-time ASL recognition system that accurately detects and classifies hand gestures from input.',
+    'Convert recognized gestures into meaningful text by combining sequential letters into complete words.'
   ],
 
   constraints: [
-    'Ensuring LLM responses remain accurate while interacting with multiple tools.',
-    'Managing latency when handling complex, multi-step workflows.',
-    'Maintaining data privacy for internal knowledge base and user prompts.',
-    'Handling varied query formats coming from employees.'
+    'Limited to CPU-based training and inference (no GPU usage).',
+    'Handling different gesture orientations (rotation, flipping)..',
+    'Ensuring high accuracy with varied lighting and backgrounds.',
+    'Avoiding overfitting due to limited labeled datasets.'
   ],
 
   
 
   projectArchitecture: {
     description:
-      ['The architecture is built on modular agents using LangGraph, integrating LLM reasoning, vector search, custom tool execution, and FastAPI backend. The system supports parallel and dynamic decision paths, improving reliability and extensibility.'],
-    diagramUrl: 'https://i.postimg.cc/YSVyXwxW/Gemini-Generated-Image-r5g3b1r5g3b1r5g3.png'
+      ['The architecture is built on a modular deep learning pipeline integrating image preprocessing, data augmentation, CNN-based gesture classification, and backend inference handling through a Flask service. The system supports structured prediction flow with confidence-based filtering and scalable model extension, improving accuracy, robustness to varied image conditions, and future adaptability for advanced recognition tasks.'],
+    diagramUrl: 'https://i.postimg.cc/43YHv9WJ/Screenshot_2026_03_01_211216.png'
   },
 
   methodology: [
-    'Designed the agent structure using LangGraph to enable deterministic workflows with branching logic.',
-    'Integrated LLMs (OpenAI, Groq, Llama) to handle reasoning, tool planning, and natural language responses.',
-    'Created custom tools for policy search, SQL database queries, email drafting, document extraction, and action execution.',
-    'Implemented vector embeddings using FAISS/Chroma for semantic search of internal documents.',
-    'Built a FastAPI backend to expose agent endpoints with streaming responses.',
-    'Implemented a memory layer for conversational context and short-term state management.',
-    'Added error-handling, timeouts, retry strategies, and logging for reliability.',
-    'Containerized application using Docker and deployed on internal servers.',
-    'Example flow:',
-    'Ingestion: The user asks a question in natural language.',
-    'Routing: LangGraph identifies intent and selects the appropriate tool.',
-    'Example: "What is maternity leave policy?" → RAG tool.',
-    'Example: "Apply for sick leave today." → Leave application tool.',
-    'Example: "what is the productivity of my employees?" → Prohance analytics tool.',
-    'Execution: The specific tool executes the task (querying a vector DB or hitting an API).',
-  'Synthesis: The Agent receives the tools raw data and generates a polite,human-readable readable response confirming the action or providing the answer.'  
+    'Developed a deep learning–based system to recognize American Sign Language (ASL) alphabets from hand gesture images.',
+    'Implemented a Convolutional Neural Network (CNN) model to extract spatial features and accurately classify hand gestures into 26 alphabet categories.',
+    'Collected and organized a labeled ASL image dataset to train and validate the model effectively.',
+    'Applied preprocessing techniques such as image resizing, normalization, and noise reduction to ensure consistent model input.',
+    'Integrated data augmentation techniques (rotation, flipping, brightness adjustments) to handle variations in lighting, orientation, and hand positioning.',
+    'Split the dataset into training and testing sets to evaluate generalization performance.',
+    'Trained the CNN model using optimized parameters to improve classification accuracy.',
+    'Evaluated the model using performance metrics such as accuracy and loss to measure effectiveness.',
+    'Designed a user interface that allows users to upload hand gesture images for prediction.',
+    'Built a backend system to process the uploaded image, perform prediction, and return the recognized alphabet output.',
+    'Ensured system reliability by handling invalid inputs and optimizing model response time.',
+    'The final system converts static ASL hand gesture images into corresponding alphabet letters, enabling improved communication support for the hearing and speech impaired community.' 
   ],
 
   keyLearnings: [
-    'Understood deep integration of FastAPI, vector databases, and custom tools to build production-ready AI workflows.',
-    'Gained strong hands-on experience with LangGraph and multi-agent system design.',
-    'Learned how to connect LLMs with real tools to perform actual business actions.',
-    'Improved architectural thinking for scalable AI systems supporting both deterministic and generative workflows.'
+    'Learned to build and train CNN models for image-based ASL recognition.',
+    'Gained hands-on experience in image preprocessing and data augmentation.',
+    'Understood model evaluation using accuracy and performance metrics.',
+    'Learned techniques to improve model robustness and prevent overfitting.'
   ],
 
   techStack: [
     {
       category: 'Programming',
-      items: ['Python', 'FastAPI']
+      items: ['Python', 'Html' , 'CSS' , 'JavaScript']
     },
     {
-      category: 'Databases',
-      items: ['PostgresSQL', 'pgvector']
+      category: 'DeepLearning',
+      items: ['TensorFLow', 'OpenCv' , 'CNN']
     },
     {
-      category: 'AI & LLM Engineering',
+      category: 'Backend',
       items: [
-        'Agents Creation',
-        'LangGraph',
-        'LangChain',
-        'OpenAI API',
-        'Groq',
-        'Llama Models'
+        'Flask'
       ]
     },
     {
-      category: 'Deployment & DevOps',
-      items: ['Docker', 'GitHub', 'Linux / WSL']
+      category: 'Deployment ',
+      items: [ 'GitHub']
     }
   ],
 
@@ -112,207 +98,71 @@ export const projects: Project[] = [
 
  
 }
-,
- 
+];
+
+export const internships: Internship[] = [
   {
-  id: 'welpun-rejection-reporting',
-  title: 'Industrial Rejection Reports Automation System',
-  summary: 'Developed a Streamlit-based application that allows users to upload rejection pipe data, automatically extract structured information from Excel sheets, and store it in MySQL without duplication.',
-  tools: ['Python', 'Streamlit', 'Pandas', 'MySQL', 'SQLAlchemy', 'Microsoft Excel'],
-  coverImage: 'https://i.postimg.cc/HLSWQZG8/9dcf9e0f-16ed-4495-a8f4-98f4c9cba131.jpg',
-
-  businessProblem: [
-    'The quality team needed a frictionless way to record daily pipe rejection reports. Existing manual entry processes were slow, prone to duplication, and caused frequent data inconsistencies.',
-    'Tracking and validating rejection reasons across multiple production stages required an automated, reliable system.'
-  ],
-
-  businessObjective: [
-    'Automate the ingestion of rejection-related production data from Excel sheets.',
-    'Eliminate duplicate entries and ensure accurate storage in the MySQL database.',
-    'Provide a simple interface for non-technical users to upload and validate rejection data.'
-  ],
-
-  constraints: [
-    'Excel files contained multiple sheets with varying formats, requiring robust parsing logic.',
-    'Duplicate detection needed to be precise to avoid overwriting or missing important records.',
-    'Users needed instant feedback on upload results and data validity.'
-  ],
-
-  projectArchitecture: {
+    company: 'Purple Technologies',
+    role: 'Deep Learning Intern',
+    duration: 'December 2024 - April 2025',
     description: [
-  "**Streamlit User Interface (Frontend):** Serves as the simple, single-point interface for the quality team to upload Excel files.",
-  "**Pandas Multi-Sheet Processing:** Reads and processes 3 sheets (`ProdRej`, `DIP1`, `DIP2`).",
-  "**Record-Level Deduplication Logic:** Prevents duplicate entries before writing to MySQL.",
-  "**SQLAlchemy ORM (Backend-to-Database Bridge):** Ensures safe and structured DB transactions.",
-  "**Three-Table MySQL Structure (Database Layer):** Stores data across ProdRej, DIP1, DIP2 tables."
-]
-
+      'During my internship at Purple Technologies as a Deep Learning Intern, I immersed myself in applying advanced concepts to real-world challenges. I worked on data preprocessing, model training, and evaluation, gaining valuable exposure to how intelligent systems can be designed and optimized for practical use. Collaborating with mentors and peers allowed me to strengthen my problem-solving abilities, sharpen my programming skills in Python, and develop a deeper appreciation for the impact of technology in creating innovative solutions. This experience not only enhanced my technical expertise but also fueled my passion for continuous learning and building software that drives meaningful change.'
+    ],
+    techStack: ['Python', 'Tensorflow', 'OpenCV'],
+    certificateUrl: 'https://i.postimg.cc/Y9TMY4hT/Screenshot-2026-02-23-232632.png'
   },
-
-  methodology: [
-    'Designed a user-friendly Streamlit interface allowing operators to upload Excel files containing ProdRej, DIP1, and DIP2 sheet data.',
-    'Used Pandas to read and validate multiple sheets while ensuring consistent column structure.',
-    'Implemented record-level deduplication by checking existing database entries before insertion.',
-    'Configured MySQL tables (prodrej, dip1, dip2) specifically mapped to each sheet structure.',
-    'Used SQLAlchemy ORM for safe, structured database transactions.',
-    'Added validation to ensure only clean, complete rows are inserted.',
-    'Provided success/error messages in real time so users could confirm upload accuracy.',
-    'Created a logging mechanism to trace uploads, rejected rows, duplicates, and system issues.'
-  ],
-
-  keyLearnings: [
-    'Gained expertise in building data ingestion pipelines with automated validation.',
-    'Learned effective strategies for detecting and preventing duplicate database entries.',
-    'Enhanced experience with Streamlit UI/UX improvements for industrial use cases.',
-    'Understood real-world production data challenges such as inconsistent formatting.'
-  ],
-
-  techStack: [
-    {
-      category: 'Programming',
-      items: ['Python']
-    },
-    {
-      category: 'Framework',
-      items: ['Streamlit']
-    },
-    {
-      category: 'Data Processing',
-      items: ['Pandas', 'OpenPyXL']
-    },
-    {
-      category: 'Database',
-      items: ['MySQL', 'SQLAlchemy']
-    },
-    {
-      category: 'Tools',
-      items: ['Excel']
-    }
-  ],
-
-  visualizations: [],
-
-  
-},
-
- {
-    id: 'Coal Price Analysis',
-    title: 'Coal Price Analysis For steel manufacturer',
-    summary: 'Analyzed coal price trends using Python, performed data cleaning and EDA with Pandas and NumPy, visualized correlations with Matplotlib and Seaborn, and created interactive dashboards for insights using Power BI.',
-    tools: ['Python', 'Pandas', 'Matplotlib', 'Power BI', 'MySQL','Looker studio'],
-    coverImage: 'https://i.postimg.cc/mk3S20Ms/maxresdefault.jpg',
-    businessProblem: [
-      'Coal procurement is a critical cost center for steel manufacturing companies, but coal prices are highly volatile due to dynamic global factors such as crude oil price fluctuations, geopolitical events, and international trade disruptions. This volatility makes it difficult for the procurement team to forecast prices accurately, leading to unoptimized purchasing decisions, increased risk exposure, and reduced profit margins.','Despite having access to market, commodity, and weather data, the organization lacked a cohesive data-driven approach to monitor coal price trends.The absence of actionable insights resulted in missed opportunities to hedge or bulk purchase during favorable market conditions.'
+  {
+    company: 'AICTE-Eduskills',
+    role: 'Data Analytics process automation Intern',
+    duration: 'September 2023 - November 2023',
+    description: [
+      'I applied for this internship to expand my knowledge in Data Analytics and Process Automation. I gained hands-on experience in data preprocessing, cleaning, visualization, and worked with real-time datasets while automating basic workflows to improve efficiency.'
     ],
-    businessObjective: [
-      'To reduce coal procurement costs and improve profit margins by leveraging data-driven insights'
-    ],
-    constraints: [
-      'Sudden shifts due to geopolitical events, wars, or trade restrictions can drastically affect coal prices.'
-    ],
-    
-    projectArchitecture: {
-      description: ['The architecture follows a layered approach for data processing and analysis, integrating multiple tools'],
-      diagramUrl: 'https://i.postimg.cc/5NFrs0k1/Screenshot-2025-04-01-121642.png'
-    },
-    methodology: [
-      'Collected historical coal prices, crude oil prices, weather data, and stock prices from client sources.',
-      'Loaded raw data into a structured SQL database to enable efficient querying and transformation.',
-      'Cleaned the data by removing duplicates, handling missing values using forward fill, and performing type conversions for numerical and date fields.',
-      'Conducted exploratory data analysis in Python to identify trends, correlations, and volatility patterns in coal prices.',
-      'Found strong correlations between coal and crude oil prices, as well as synchronized movement among different coal grades.',
-      'Confirmed minimal influence of regional weather data on coal pricing trends.',
-      'Created dynamic dashboards using Power BI and Google Looker Studio to visualize price trends, correlations, and key performance indicators.',
-      'Enabled interactive filtering by coal grade, region, and date range to support procurement decisions.',
-      'Generated actionable insights such as using a unified buying strategy across grades, tracking oil as a leading indicator, and leveraging hedging strategies.',
-      'Presented findings to stakeholders through a structured slide deck with visuals, insights, and business recommendations.'
-    ],
-    keyLearnings: [
-      'Learned how to handle real-world, messy datasets with missing values, outliers, and inconsistent formats.',
-      'Improved storytelling skills by translating technical insights into clear, business-oriented recommendations.',
-      'Learned how to communicate insights effectively to non-technical stakeholders and support strategic procurement decisions.',
-      'Gained hands-on experience with end-to-end data workflows, from data collection and cleaning to analysis and visualization.'
-    ],
-    techStack: [
-      {
-        category: 'Programming',
-        items: ['Python','FastAPI', 'Streamlit']
-      },
-      {
-        category: 'Data Engineering',
-        items: ['Pandas','pyspark','SQL','prefect',
-      'Airflow',
-      'Vector DB','mongoDB']
-      },
-      {
-    category: 'AI & LLM Engineering',
-    items: [
-      'Agents creation',
-      'LangGraph',
-      'LangChain',
-      'OpenAI API',
-      'Llama Models',
-    ],
-  },
-      {
-        category: 'Database',
-        items: ['PostgreSQL','MySQL']
-      },
-      {
-        category: 'Data Analytics Tools',
-        items: ['Power BI','Looker Studio']
-      }
-    ],
-    visualizations: [],
-    
-  },
-
+    techStack: ['Python' , 'SQL'],
+    certificateUrl: 'https://i.postimg.cc/c1fgcYNf/aicte1.jpg'
+  }
 ];
 
 export const skills: Skill[] = [
   {
-    category: 'Programming & Backend',
+    category: 'Programming & Development',
     icon: '💻',
-    items: ['Python', 'FastAPI', 'Streamlit'],
-    description: 'Building scalable backend services, APIs, and automation workflows.'
+    items: ['Java', 'C#', 'Python'],
+    description: 'Building efficient, scalable applications using Java, C# and Python'
   },
 
   {
-    category: 'Data Engineering',
+    category: 'Web Technologies',
+    icon: '🌐',
+    items: [
+      'SQL ( MySQL / Oracle SQL )',
+      'HTML'
+    ],
+    description: 'Designing and managing responsive web interfaces and databases using HTML and SQL technologies.'
+  },
+
+  {
+    category: 'Tools',
     icon: '🛠️',
     items: [
-      'SQL (PostgreSQL / MySQL)',
-      'Prefect',
-      'Airflow',
-      'Vector DB'
-    ],
-    description: 'Developing ETL pipelines, orchestration workflows, and optimized data systems.'
-  },
-
-  {
-    category: 'AI & LLM Engineering',
-    icon: '🤖',
-    items: [
-      'Agentic AI',
-      'LangGraph',
-      'LangChain',
-      'OpenAi'
+      'Git',
+      'MS Excel'
     ],
     description:
-      'Creating LLM-powered automation, agents, and retrieval-based AI systems.'
+      'Utilizing Git for version control and collaboration, and MS Excel for data organization, analysis, and reporting.'
   },
 
   {
-    category: 'Data Analysis Tools',
-    icon: '📊',
-    items: ['Advanced Excel', 'Power BI', 'Pandas'],
-    description: 'Performing EDA, statistical analysis, and generating meaningful insights from data.'
+    category: 'Core Concepts',
+    icon: '📚',
+    items: ['OOP(object oriented programming)', 'Data Structures'],
+    description: 'Strong understanding of core concepts including Data Structures and Object-Oriented Programming for building efficient and scalable applications.'
   },
 
   {
-    category: 'Other Tools & Platforms',
-    icon: '🧰',
-    items: ['Git', 'GitHub', 'Postman','Docker'],
-    description: 'Productive development workflows, version control, and API testing.'
+    category: 'Framework',
+    icon: '⚡',
+    items: ['dotnet'],
+    description: 'Basic understanding of the .NET framework for developing simple web and application solutions.'
   }
 ];

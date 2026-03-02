@@ -25,7 +25,7 @@ export function ContactForm({ isDarkMode }: ContactFormProps) {
       // Send email using mailto
       const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
       const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-      window.location.href = `mailto:jayamangalatagore@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:jahnavijanu2121@gmail.com?subject=${subject}&body=${body}`;
       
       toast.success('Message prepared! Your email client will open shortly.');
       setFormData({ name: '', email: '', message: '' });

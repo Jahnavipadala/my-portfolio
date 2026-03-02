@@ -15,7 +15,7 @@ import {
   Phone
 } from 'lucide-react';
 import { Modal } from './components/Modal';
-import { projects, skills } from './data';
+import { projects, skills, internships } from './data';
 import { Project } from './types';
 import { Toaster } from 'react-hot-toast';
 import toast from 'react-hot-toast';
@@ -30,6 +30,7 @@ function App() {
   const [isSkillTransitioning, setIsSkillTransitioning] = useState(false);
   const [showContactInfo, setShowContactInfo] = useState(false);
   const [hoveredSkillIndex, setHoveredSkillIndex] = useState<number | null>(null);
+  const [selectedCert, setSelectedCert] = useState<string | null>(null);
 
   const handleSkillChange = (direction: 'next' | 'prev') => {
     setIsSkillTransitioning(true);
@@ -80,6 +81,9 @@ function App() {
 
     const sections = document.querySelectorAll('section[id]');
     sections.forEach((section) => observer.observe(section));
+    // also watch internships div since it's not a section
+    const internDiv = document.getElementById('internships');
+    if (internDiv) observer.observe(internDiv);
 
     return () => observer.disconnect();
   }, []);
@@ -144,7 +148,7 @@ function App() {
 
             <div className="hidden sm:flex items-center gap-4">
               <div className="flex items-center gap-2">
-                {['about', 'education', 'skills', 'projects', 'contact'].map((section) => (
+                {['about', 'education', 'skills', 'projects', 'internships', 'contact'].map((section) => (
                   <button
                     key={section}
                     onClick={() => scrollToSection(section)}
@@ -176,7 +180,7 @@ function App() {
           </div>
 
           <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'} pb-4`}>
-            {['about', 'education', 'skills', 'projects', 'contact'].map((section) => (
+            {['about', 'education', 'skills', 'projects', 'internships', 'contact'].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
@@ -205,7 +209,7 @@ function App() {
                 <div className="mb-8 relative animate-float">
                   <div className={`absolute inset-0 ${isDarkMode ? 'bg-cyan-400/20' : 'bg-blue-400/20'} rounded-full blur-xl transform animate-pulse`}></div>
                   <img
-                    src="https://i.postimg.cc/VNq9vSLf/Whats-App-Image-2025-03-31-at-14-09-47-e669fdc9.jpg"
+                    src="https://i.postimg.cc/65qZ6Ct5/j.jpg"
                     alt="Profile"
                     className={`w-64 h-64 rounded-full border-4 ${isDarkMode ? 'border-cyan-400/20 shadow-cyan-500/20' : 'border-blue-400/20 shadow-blue-500/20'} shadow-lg mx-auto relative z-10 transform hover:scale-105 transition-transform duration-300`}
                   />
@@ -214,7 +218,7 @@ function App() {
                 <div className="flex justify-center gap-4 mb-6">
 
                  <a
-                  href="https://www.linkedin.com/in/tagoor-jayamangala-b19a30283/"
+                  href="https://www.linkedin.com/in/jahnavi-padala-bb037023a"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`p-3 rounded-full shadow-md border-2 ${
@@ -228,7 +232,7 @@ function App() {
 
                 
                  <a
-                  href="mailto:jayamangalatagoor@gmail.com"
+                  href="mailto:jahnavijanu2121@gmail.com"
                   className={`p-3 rounded-full shadow-md border-2 ${
                     isDarkMode
                       ? 'bg-gray-900 border-cyan-400/40 text-cyan-300 hover:border-cyan-400 hover:shadow-cyan-500/40'
@@ -260,7 +264,7 @@ function App() {
   font-[Satoshi] tracking-tight 
   text-white drop-shadow-[0_2px_8px_rgba(0,200,255,0.4)]"
 >
-  Tagoor Paramathma Jayamangala
+  Jahnavi Padala
 </h1>
 
 
@@ -269,11 +273,11 @@ function App() {
 
 
                 <p className={`text-xl mb-8 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  Data Engineer | Data-Driven Problem Solver 
+                  Aspirant Software Developer | Java • C# • Python 
                 </p>
                 <div className="flex justify-center space-x-4">
                   <a
-                    href="https://drive.google.com/file/d/1EcmEbUoDndQ4t4k1C6LT9gOT4YpEU_ib/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/15FkcY9qD97FUelb-QkuVVcpo4YnopXTd/view?usp=sharing"
                     target="_blank" 
                     rel="noopener noreferrer"
                     className={`inline-flex items-center px-6 py-3 ${isDarkMode ? 'bg-cyan-500 text-gray-900 hover:bg-cyan-400' : 'bg-blue-500 text-white hover:bg-blue-400'} rounded-lg transition-all duration-300 transform hover:scale-105 font-medium`}
@@ -292,14 +296,14 @@ function App() {
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text">About Me</h2>
             <div className="prose max-w-none">
               <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed`}>
-                I’m a Data Engineer who enjoys turning raw data into clean, scalable systems and building intelligent solutions that automate real-world workflows. I work across the data and AI pipeline designing ETL processes, optimizing data structures, and creating LLM-powered agents that enhance productivity and decision-making.
+                I’m a Computer Science Engineering graduate with a strong foundation in Java, C#, SQL, and web technologies. I enjoy building efficient, scalable solutions and solving real-world problems through structured thinking and logical analysis.
               </p>
               <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed mt-4`}>
-                I hold a B.Tech from Sagi Rama Krishnam Raju Engineering college, which laid the foundation for my problem-solving skills and logical thinking. My strengths include attention to detail, structured analysis, and the ability to translate technical findings into actionable business strategies.
+                I hold a B.Tech from Ramachandra college of Engineering, which laid the foundation for my problem-solving skills and logical thinking. My strengths include Strong logical thinking, analytical problem-solving, adaptability to new technologies, and effective teamwork.
               </p>
               <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed mt-4`}>
-                I am fluent in English, Telugu, and Hindi, enabling me to communicate effectively across teams and with stakeholders. I am open to relocating and flexible to work.
-                I'm excited to grow in the world of data and continuously learn new ways to turn raw numbers into business value.
+                I am fluent in English and Telugu, enabling me to communicate effectively across teams and with project stakeholders. I am open to relocating and flexible to work.
+                I’m eager to grow in a software development or data-focused role where I can contribute meaningful, impact-driven solutions.
               </p>
             </div>
           </div>
@@ -316,15 +320,15 @@ function App() {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                   <div>
                     <h3 className={`text-xl font-bold ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`}>
-                      B.Tech in Electrical and Electronics Engineering
+                      B.Tech in Computer Science and Engineering
                     </h3>
                     <p className={`text-lg font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                      Sagi RamaKrishnam Raju Engineering College 
+                      Ramachandra College of Engineering 
                     </p>
                   </div>
                   <div className={`text-right ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                    <p className="font-medium">2020 - 2024</p>
-                    <p className="font-bold">CGPA: 7.93</p>
+                    <p className="font-medium">2021 - 2025</p>
+                    <p className="font-bold">CGPA: 8.40</p>
                   </div>
                 </div>
               </div>
@@ -341,8 +345,8 @@ function App() {
                     </p>
                   </div>
                   <div className={`text-right ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                    <p className="font-medium">2018 - 2020</p>
-                    <p className="font-bold">CGPA: 9.75</p>
+                    <p className="font-medium">2019 - 2021</p>
+                    <p className="font-bold">Percentage: 97.2%</p>
                   </div>
                 </div>
               </div>
@@ -359,14 +363,15 @@ function App() {
                     </p>
                   </div>
                   <div className={`text-right ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                    <p className="font-medium">2017 - 2018</p>
-                    <p className="font-bold">CGPA: 9.8</p>
+                    <p className="font-medium">2018 - 2019</p>
+                    <p className="font-bold">GPA: 10.0</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
 
        <section
   id="skills"
@@ -567,6 +572,44 @@ function App() {
           </div>
         </section>
 
+            {/* internships nested under projects */}
+            {internships.length > 0 && (
+              <div id="internships" className="mt-12 px-4 sm:px-6 lg:px-8">
+                <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text">Internships</h3>
+                <div className="grid grid-cols-1 gap-8">
+                  {internships.map((intern, index) => (
+                    <div
+                      key={intern.company}
+                      className={`group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl animate-scale-in cursor-pointer ${
+                        isDarkMode ? 'bg-gray-900' : 'bg-white'
+                      }`}
+                    >
+                      <div className="p-6">
+                        <h4 className={`text-xl font-bold mb-2 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`}>{intern.role}</h4>
+                        <p className={`text-lg mb-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{intern.company}</p>
+                        <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{intern.duration}</p>
+                        {intern.description && (
+                          <ul className="list-disc list-inside text-gray-300 mb-4">
+                            {intern.description.map((line, idx) => (
+                              <li key={idx}>{line}</li>
+                            ))}
+                          </ul>
+                        )}
+                        {intern.certificateUrl && (
+                          <button
+                            onClick={() => setSelectedCert(intern.certificateUrl!)}
+                            className="mt-2 text-cyan-400 hover:underline"
+                          >
+                            View Certificate
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
         <section id="contact" className={`py-16 ${isDarkMode ? 'bg-gray-900' : 'bg-white'}`}>
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 text-transparent bg-clip-text">
@@ -599,24 +642,24 @@ function App() {
       <div className="flex items-center justify-center gap-4">
         <Phone className={`w-6 h-6 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`} />
         <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-          +91 9182619119
+          +91 7396841550
         </p>
       </div>
 
       <div className="flex items-center justify-center gap-4">
         <Mail className={`w-6 h-6 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`} />
         <a
-          href="mailto:jayamangalatagore@gmail.com"
+          href="mailto:jahnavijanu2121@gmail.com"
           className={`text-lg ${isDarkMode ? 'text-gray-300 hover:text-cyan-400' : 'text-gray-600 hover:text-blue-600'} transition-colors`}
         >
-          jayamangalatagore@gmail.com
+          jahnavijanu2121@gmail.com
         </a>
       </div>
 
       <div className="flex items-center justify-center gap-4">
         <Linkedin className={`w-6 h-6 ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`} />
         <a
-          href="https://www.linkedin.com/in/tagoor-jayamangala-b19a30283/"
+          href="https://www.linkedin.com/in/jahnavi-padala-bb037023a"
           target="_blank"
           rel="noopener noreferrer"
           className={`text-lg ${isDarkMode ? 'text-gray-300 hover:text-cyan-400' : 'text-gray-600 hover:text-blue-600'} transition-colors`}
@@ -634,7 +677,7 @@ function App() {
 
       <footer className={`${isDarkMode ? 'bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 text-gray-300' : 'bg-gradient-to-r from-gray-100 via-blue-50 to-gray-100 text-gray-600'} py-8`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p>&copy; 2025 Tagoor Paramathma Jayamangala. All rights reserved.</p>
+          <p>&copy; 2025 Jahnavi Padala. All rights reserved.</p>
         </div>
       </footer>
 
@@ -644,6 +687,30 @@ function App() {
           onClose={() => setSelectedProject(null)}
           isDarkMode={isDarkMode}
         />
+      )}
+
+      {/* certificate viewer modal */}
+      {selectedCert && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className={`${isDarkMode ? 'bg-gray-900' : 'bg-white'} rounded-xl w-full max-w-3xl max-h-[90vh] overflow-auto shadow-xl border`}>
+            <div className={`p-4 border-b flex justify-between items-center ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+              <h3 className={`text-xl font-bold ${isDarkMode ? 'text-cyan-400' : 'text-blue-600'}`}>Certificate</h3>
+              <button
+                onClick={() => setSelectedCert(null)}
+                className={`p-2 ${isDarkMode ? 'text-gray-400 hover:text-gray-200' : 'text-gray-600 hover:text-gray-800'} rounded-full`}
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="p-4">
+              <iframe
+                src={selectedCert}
+                title="Certificate"
+                className="w-full h-[70vh]"
+              ></iframe>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

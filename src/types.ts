@@ -27,3 +27,12 @@ export interface Skill {
   icon?: string;
   description?: string;
 }
+
+export interface Internship {
+  company: string;
+  role: string;
+  duration: string;
+  description?: string[];
+  techStack?: string[];
+  certificateUrl?: string;
+}
