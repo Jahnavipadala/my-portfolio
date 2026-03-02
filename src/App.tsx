@@ -244,7 +244,7 @@ function App() {
 
                 
                   <a
-                  href="https://github.com/TagoorJ"
+                  href="https://github.com/Jahnavipadala"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`p-3 rounded-full shadow-md border-2 ${
